@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kennedy · Headshot Session Brief · May 30</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #faf7f2;
+    --warm-white: #fff9f3;
+    --blush: #f0d9ce;
+    --rose: #c8826a;
+    --deep-rose: #a05a45;
+    --terracotta: #d4785c;
+    --sage: #8a9e8c;
+    --deep-sage: #5c7260;
+    --charcoal: #2c2825;
+    --warm-grey: #7a6f67;
+    --light-grey: #e8e0d8;
+    --gold: #c9a96e;
+    --ink: #1e1a17;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--charcoal);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, #f5ddd3 0%, transparent 65%),
+      radial-gradient(ellipse 50% 40% at 85% 80%, #dce8dc 0%, transparent 55%),
+      var(--cream);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 25%, rgba(200,130,106,0.08) 0%, transparent 40%),
+      radial-gradient(circle at 85% 70%, rgba(138,158,140,0.10) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  /* Decorative circles */
+  .hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-circle-1 {
+    width: 420px; height: 420px;
+    border: 1px solid rgba(200,130,106,0.12);
+    top: -80px; right: -100px;
+    animation: slowSpin 40s linear infinite;
+  }
+  .hero-circle-2 {
+    width: 220px; height: 220px;
+    border: 1px solid rgba(138,158,140,0.15);
+    bottom: 60px; left: -60px;
+    animation: slowSpin 30s linear infinite reverse;
+  }
+  .hero-circle-3 {
+    width: 600px; height: 600px;
+    border: 1px solid rgba(201,169,110,0.07);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes slowSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.4s;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--warm-grey);
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.6s;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 0.8s;
+  }
+
+  .meta-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .meta-pill-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-grey);
+    font-weight: 500;
+  }
+
+  .meta-pill-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    font-weight: 400;
+  }
+
+  .divider-line {
+    width: 1px;
+    height: 40px;
+    background: var(--light-grey);
+    align-self: center;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards 1.2s;
+  }
+
+  .scroll-hint span {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-grey);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--rose), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50%       { opacity: 1;   transform: scaleY(1.1); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── NAV ─────────────────────────────────────── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--light-grey);
+    padding: 0 2rem;
+    overflow-x: auto;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+
+  .nav-inner a {
+    display: block;
+    padding: 1rem 1.1rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--warm-grey);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+  }
+
+  .nav-inner a:hover { color: var(--rose); }
+
+  /* ─── LAYOUT ──────────────────────────────────── */
+  main { max-width: 1100px; margin: 0 auto; padding: 0 2rem 6rem; }
+
+  /* ─── SECTION BASE ────────────────────────────── */
+  .section {
+    padding: 5rem 0 2rem;
+  }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--blush);
+    line-height: 1;
+    padding-top: 0.15rem;
+  }
+
+  .section-title-group {}
+
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .section-lead {
+    font-size: 1.05rem;
+    color: var(--warm-grey);
+    max-width: 680px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  /* ─── DIVIDER ─────────────────────────────────── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--blush), transparent);
+    margin: 1rem 0 4rem;
+  }
+
+  /* ─── INTRO / PURPOSE ─────────────────────────── */
+  .purpose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .purpose-grid { grid-template-columns: 1fr; }
+  }
+
+  .purpose-card {
+    background: var(--warm-white);
+    border: 1px solid var(--light-grey);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .purpose-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(44,40,37,0.07);
+  }
+
+  .purpose-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--rose);
+    border-radius: 3px 0 0 3px;
+  }
+
+  .purpose-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .purpose-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .purpose-card-text {
+    font-size: 0.9rem;
+    color: var(--warm-grey);
+    line-height: 1.7;
+  }
+
+  /* ─── PROFILE BANNER ──────────────────────────── */
+  .profile-banner {
+    background: linear-gradient(135deg, var(--charcoal) 0%, #3d3530 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .profile-banner::after {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,130,106,0.2) 0%, transparent 70%);
+  }
+
+  .profile-banner-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-banner-name em {
+    color: var(--terracotta);
+    font-style: italic;
+  }
+
+  .profile-banner-sub {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  .profile-tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .profile-stats {
+    display: flex; flex-direction: column; gap: 1.2rem;
+    position: relative; z-index: 1;
+  }
+
+  .profile-stat-item {
+    text-align: right;
+  }
+
+  .profile-stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--terracotta);
+    line-height: 1;
+  }
+
+  .profile-stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  @media (max-width: 640px) {
+    .profile-banner { grid-template-columns: 1fr; }
+    .profile-stats { flex-direction: row; }
+    .profile-stat-item { text-align: left; }
+  }
+
+  /* ─── LOOK CARDS ──────────────────────────────── */
+  .looks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .looks-grid { grid-template-columns: 1fr; }
+  }
+
+  .look-card {
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .look-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(44,40,37,0.10);
+  }
+
+  .look-card-1 { background: linear-gradient(145deg, #fdeee7, #faf0ea); border: 1px solid rgba(200,130,106,0.2); }
+  .look-card-2 { background: linear-gradient(145deg, #e8eee8, #edf3ed); border: 1px solid rgba(92,114,96,0.2); }
+  .look-card-3 { background: linear-gradient(145deg, #f0eae0, #f5f0e8); border: 1px solid rgba(201,169,110,0.2); }
+  .look-card-4 { background: linear-gradient(145deg, #e8e8f0, #eeeef6); border: 1px solid rgba(120,120,160,0.2); }
+
+  .look-priority {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .look-card-1 .look-priority { color: var(--deep-rose); }
+  .look-card-2 .look-priority { color: var(--deep-sage); }
+  .look-card-3 .look-priority { color: #8a7040; }
+  .look-card-4 .look-priority { color: #555585; }
+
+  .priority-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .look-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .look-subtitle {
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--warm-grey);
+    margin-bottom: 1.25rem;
+  }
+
+  .look-body {
+    font-size: 0.875rem;
+    color: var(--charcoal);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .look-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .look-detail {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    font-size: 0.82rem;
+    color: var(--charcoal);
+    line-height: 1.5;
+  }
+
+  .look-detail-icon {
+    flex-shrink: 0;
+    width: 18px;
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+  }
+
+  .look-badge {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .look-card-1 .look-badge { background: rgba(200,130,106,0.15); color: var(--deep-rose); }
+  .look-card-2 .look-badge { background: rgba(92,114,96,0.12); color: var(--deep-sage); }
+  .look-card-3 .look-badge { background: rgba(201,169,110,0.15); color: #7a6030; }
+  .look-card-4 .look-badge { background: rgba(120,120,160,0.12); color: #454575; }
+
+  /* ─── WARDROBE ────────────────────────────────── */
+  .wardrobe-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .wardrobe-section { grid-template-columns: 1fr; }
+  }
+
+  .wardrobe-box {
+    background: var(--warm-white);
+    border: 1px solid var(--light-grey);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: box-shadow 0.3s;
+  }
+
+  .wardrobe-box:hover {
+    box-shadow: 0 8px 30px rgba(44,40,37,0.06);
+  }
+
+  .wardrobe-box-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  .wardrobe-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .wardrobe-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    color: var(--charcoal);
+    line-height: 1.5;
+  }
+
+  .wardrobe-list li::before {
+    content: '→';
+    color: var(--rose);
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+    font-weight: 500;
+  }
+
+  /* ─── COLOR PALETTE ───────────────────────────── */
+  .palette-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    align-items: center;
+  }
+
+  .palette-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .palette-swatch {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.6);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.3);
+    transition: transform 0.2s;
+  }
+
+  .palette-swatch:hover { transform: scale(1.12); }
+
+  .palette-name {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    color: var(--warm-grey);
+    text-align: center;
+    max-width: 60px;
+  }
+
+  .avoid-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .avoid-chip {
+    background: #fff0ed;
+    border: 1px solid rgba(200,80,60,0.15);
+    color: #b84535;
+    border-radius: 100px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .avoid-chip::before { content: '✕'; font-size: 0.65rem; }
+
+  /* ─── HAIR / STYLING ──────────────────────────── */
+  .styling-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .styling-grid { grid-template-columns: 1fr; }
+  }
+
+  .styling-card {
+    background: var(--warm-white);
+    border: 1px solid var(--light-grey);
+    border-radius: 14px;
+    padding: 1.75rem;
+    transition: transform 0.3s;
+  }
+
+  .styling-card:hover { transform: translateY(-2px); }
+
+  .styling-card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .styling-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .styling-card-text {
+    font-size: 0.845rem;
+    color: var(--warm-grey);
+    line-height: 1.7;
+  }
+
+  /* ─── EXPRESSIONS ─────────────────────────────── */
+  .expression-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .expression-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .expression-card {
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .expression-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(44,40,37,0.08);
+  }
+
+  .ec-1 { background: #fef3ee; border-color: rgba(200,130,106,0.2); }
+  .ec-2 { background: #f0f5f0; border-color: rgba(138,158,140,0.2); }
+  .ec-3 { background: #faf3e8; border-color: rgba(201,169,110,0.2); }
+  .ec-4 { background: #f0eef8; border-color: rgba(150,140,200,0.2); }
+  .ec-5 { background: #fce8ee; border-color: rgba(200,100,130,0.2); }
+  .ec-6 { background: #eef5f8; border-color: rgba(100,160,200,0.2); }
+
+  .expression-emoji {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .expression-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .expression-desc {
+    font-size: 0.78rem;
+    color: var(--warm-grey);
+    line-height: 1.6;
+  }
+
+  /* ─── BACKGROUND & LIGHTING ───────────────────── */
+  .bg-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .bg-split { grid-template-columns: 1fr; }
+  }
+
+  .bg-card {
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-card-studio {
+    background: linear-gradient(145deg, #f0ece6, #f7f4ef);
+    border: 1px solid var(--light-grey);
+  }
+
+  .bg-card-outdoor {
+    background: linear-gradient(145deg, #e6ede8, #eef3ef);
+    border: 1px solid rgba(138,158,140,0.25);
+  }
+
+  .bg-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .bg-card-sub {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--warm-grey);
+    margin-bottom: 1.25rem;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* ─── MISTAKES ────────────────────────────────── */
+  .mistakes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mistake-item {
+    background: #fffaf8;
+    border: 1px solid rgba(200,130,106,0.15);
+    border-left: 4px solid var(--rose);
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    transition: transform 0.2s;
+  }
+
+  .mistake-item:hover { transform: translateX(4px); }
+
+  .mistake-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--blush);
+    line-height: 1;
+  }
+
+  .mistake-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .mistake-text {
+    font-size: 0.855rem;
+    color: var(--warm-grey);
+    line-height: 1.65;
+  }
+
+  /* ─── CHECKLIST ───────────────────────────────── */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .checklist-grid { grid-template-columns: 1fr; }
+  }
+
+  .checklist-box {
+    background: var(--warm-white);
+    border: 1px solid var(--light-grey);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .checklist-box-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .checklist-box-title span { font-size: 1.1rem; }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--light-grey);
+    font-size: 0.855rem;
+    color: var(--charcoal);
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-radius: 4px;
+    padding-left: 4px;
+  }
+
+  .check-item:last-child { border-bottom: none; }
+  .check-item:hover { background: rgba(200,130,106,0.04); }
+
+  .check-box {
+    width: 18px; height: 18px;
+    border: 1.5px solid var(--light-grey);
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: white;
+  }
+
+  .check-item.checked .check-box {
+    background: var(--rose);
+    border-color: var(--rose);
+  }
+
+  .check-item.checked .check-box::after {
+    content: '✓';
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .check-item.checked .check-label {
+    text-decoration: line-through;
+    color: var(--warm-grey);
+  }
+
+  /* ─── QUOTE BLOCK ─────────────────────────────── */
+  .quote-block {
+    background: linear-gradient(135deg, var(--charcoal), #3a342f);
+    border-radius: 20px;
+    padding: 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 3rem 0;
+  }
+
+  .quote-block::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16rem;
+    color: rgba(200,130,106,0.08);
+    position: absolute;
+    top: -3rem; left: 1rem;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: white;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-attr {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─── FOOTER ──────────────────────────────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+  }
+
+  footer strong {
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ─── HIGHLIGHT BOX ───────────────────────────── */
+  .highlight-box {
+    background: linear-gradient(135deg, #fef0ea, #fdf6f0);
+    border: 1px solid rgba(200,130,106,0.25);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .highlight-box-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--deep-rose);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .highlight-box p {
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    line-height: 1.75;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 768px) {
+    .section-header { grid-template-columns: 1fr; }
+    .section-number { font-size: 2.5rem; }
+    .profile-banner { padding: 2rem; }
+    .quote-block { padding: 2.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ──────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-circle hero-circle-1"></div>
+  <div class="hero-circle hero-circle-2"></div>
+  <div class="hero-circle hero-circle-3"></div>
+
+  <p class="hero-eyebrow">Headshot Session Creative Brief</p>
+  <h1 class="hero-title"><em>Kennedy</em></h1>
+  <p class="hero-subtitle">A guide for the photographer and her family — May 30, 2025</p>
+
+  <div class="hero-meta">
+    <div class="meta-pill">
+      <span class="meta-pill-label">Session Date</span>
+      <span class="meta-pill-value">May 30, 2025</span>
+    </div>
+    <div class="divider-line"></div>
+    <div class="meta-pill">
+      <span class="meta-pill-label">Age</span>
+      <span class="meta-pill-value">11 Years Old</span>
+    </div>
+    <div class="divider-line"></div>
+    <div class="meta-pill">
+      <span class="meta-pill-label">Target Markets</span>
+      <span class="meta-pill-value">Film · TV · Streaming · Commercials</span>
+    </div>
+    <div class="divider-line"></div>
+    <div class="meta-pill">
+      <span class="meta-pill-label">Looks to Capture</span>
+      <span class="meta-pill-value">3–4 Distinct</span>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── NAV ───────────────────────────────────────── -->
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <a href="#purpose">Purpose</a>
+    <a href="#profile">Profile</a>
+    <a href="#looks">Looks</a>
+    <a href="#wardrobe">Wardrobe</a>
+    <a href="#styling">Hair & Styling</a>
+    <a href="#expressions">Expressions</a>
+    <a href="#background">Background</a>
+    <a href="#mistakes">Mistakes to Avoid</a>
+    <a href="#checklist">Shot List</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ─── PURPOSE ──────────────────────────────── -->
+  <section class="section" id="purpose">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">The Goal</p>
+        <h2 class="section-title">Purpose of <em>These Photos</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      These headshots are Kennedy's first professional introduction to casting directors, agents, and producers. Done well, they'll serve her submissions across multiple markets for the next 12–18 months.
+    </p>
+
+    <div class="purpose-grid">
+      <div class="purpose-card">
+        <div class="purpose-card-icon">🎬</div>
+        <div class="purpose-card-title">Primary Purpose</div>
+        <div class="purpose-card-text">Create a professional, castable image package for submission to agents, casting platforms (Actors Access, Casting Networks), and direct casting calls across film, TV, streaming, and commercial markets.</div>
+      </div>
+      <div class="purpose-card">
+        <div class="purpose-card-icon">🌟</div>
+        <div class="purpose-card-title">The Core Goal</div>
+        <div class="purpose-card-text">Show casting directors exactly who Kennedy is — not a polished performance of a child actor, but <em>her</em>. Authentic, warm, present, and alive. A casting director should see these photos and want to meet her.</div>
+      </div>
+      <div class="purpose-card">
+        <div class="purpose-card-icon">📁</div>
+        <div class="purpose-card-title">Deliverables Needed</div>
+        <div class="purpose-card-text">2–4 final edited images covering commercial, theatrical, and personality lanes. High-resolution files for digital submissions and print composites. Standard 8×10 crop with name potential.</div>
+      </div>
+      <div class="purpose-card">
+        <div class="purpose-card-icon">⏳</div>
+        <div class="purpose-card-title">Shelf Life</div>
+        <div class="purpose-card-text">These photos will be Kennedy's primary submission materials for 12–18 months, or until significant appearance changes (growth spurt, braces on/off, major haircut). Plan for an update session in late 2026.</div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"Show me who she is — not who you want her to be. The eyes have to be alive. Everything else is secondary."</p>
+      <p class="quote-attr">— Casting director feedback on child actor headshots</p>
+    </div>
+  </section>
+
+  <!-- ─── PROFILE ───────────────────────────────── -->
+  <section class="section" id="profile">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">The Actor</p>
+        <h2 class="section-title">Kennedy's <em>Profile &amp; Goals</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <div class="profile-banner">
+      <div>
+        <div class="profile-banner-name"><em>Kennedy</em></div>
+        <div class="profile-banner-sub">Child Actor · 11 Years Old</div>
+        <div class="profile-tags">
+          <span class="profile-tag">Film</span>
+          <span class="profile-tag">Television</span>
+          <span class="profile-tag">Streaming</span>
+          <span class="profile-tag">Commercials</span>
+          <span class="profile-tag">Family Content</span>
+          <span class="profile-tag">Tween / YA</span>
+        </div>
+      </div>
+      <div class="profile-stats">
+        <div class="profile-stat-item">
+          <div class="profile-stat-value">11</div>
+          <div class="profile-stat-label">Years Old</div>
+        </div>
+        <div class="profile-stat-item">
+          <div class="profile-stat-value">3–4</div>
+          <div class="profile-stat-label">Looks This Session</div>
+        </div>
+        <div class="profile-stat-item">
+          <div class="profile-stat-value">4</div>
+          <div class="profile-stat-label">Target Markets</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-lead" style="margin-top: 2rem;">
+      At 11, Kennedy sits at a perfect casting sweet spot — old enough to handle complex material, young enough for family content, and transitioning into the tween lane that networks like Disney+, Netflix, and Apple TV+ actively cast. Her headshots should reflect this versatility.
+    </p>
+  </section>
+
+  <!-- ─── LOOKS ─────────────────────────────────── -->
+  <section class="section" id="looks">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">Session Plan</p>
+        <h2 class="section-title">Essential <em>Headshot Looks</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      Each look targets a distinct casting lane. Think of them as different auditions happening within the same session. Capture Look 1 first while energy is highest — it's the most important.
+    </p>
+
+    <div class="looks-grid">
+
+      <!-- Look 1 -->
+      <div class="look-card look-card-1">
+        <div class="look-priority"><div class="priority-dot"></div>Highest Priority</div>
+        <div class="look-name">Commercial</div>
+        <div class="look-subtitle">The kid next door — warm, bright, real</div>
+        <div class="look-body">
+          This is Kennedy's workhorse look. It books the most work — commercials, print campaigns, family films, and streaming family content all draw from this energy. The goal is genuine, effortless joy.
+        </div>
+        <div class="look-details">
+          <div class="look-detail"><span class="look-detail-icon">👗</span><span>Bright, warm colors — cobalt, coral, warm red, soft yellow</span></div>
+          <div class="look-detail"><span class="look-detail-icon">😊</span><span>Her <em>best</em> natural smile — not "cheese," but the real one</span></div>
+          <div class="look-detail"><span class="look-detail-icon">💡</span><span>Photographer tip: ask her about something she loves mid-shoot</span></div>
+          <div class="look-detail"><span class="look-detail-icon">🎯</span><span>Books: commercials, print, streaming family content, pilot season</span></div>
+        </div>
+        <div class="look-badge">Capture First</div>
+      </div>
+
+      <!-- Look 2 -->
+      <div class="look-card look-card-2">
+        <div class="look-priority"><div class="priority-dot"></div>Essential</div>
+        <div class="look-name">Theatrical</div>
+        <div class="look-subtitle">Present, grounded, emotionally alive</div>
+        <div class="look-body">
+          This is the look that says "I can carry a scene." Not sad — <em>still</em> and <em>real</em>. Used for drama submissions, guest roles, and any project with emotional weight.
+        </div>
+        <div class="look-details">
+          <div class="look-detail"><span class="look-detail-icon">👗</span><span>Subdued tones — navy, forest green, burgundy, warm grey</span></div>
+          <div class="look-detail"><span class="look-detail-icon">🧥</span><span>Layering works well — cardigan, denim jacket, simple blazer</span></div>
+          <div class="look-detail"><span class="look-detail-icon">👁️</span><span>Eyes forward, jaw relaxed — quiet, curious, present</span></div>
+          <div class="look-detail"><span class="look-detail-icon">🎯</span><span>Books: TV dramas, coming-of-age films, streaming originals</span></div>
+        </div>
+        <div class="look-badge">Capture Second</div>
+      </div>
+
+      <!-- Look 3 -->
+      <div class="look-card look-card-3">
+        <div class="look-priority"><div class="priority-dot"></div>Differentiator</div>
+        <div class="look-name">Personality</div>
+        <div class="look-subtitle">The shot someone can't forget</div>
+        <div class="look-body">
+          This is <em>Kennedy</em>, undiluted. The photo that separates her from the stack. Let her have a say in wardrobe. The goal is something that makes someone who knows her say "that's so her."
+        </div>
+        <div class="look-details">
+          <div class="look-detail"><span class="look-detail-icon">👗</span><span>Kennedy's choice — a color or style she gravitates to naturally</span></div>
+          <div class="look-detail"><span class="look-detail-icon">✨</span><span>Expression: playful, knowing, mid-laugh, confidently herself</span></div>
+          <div class="look-detail"><span class="look-detail-icon">💬</span><span>Let her direct this one — her instinct is the right instinct</span></div>
+          <div class="look-detail"><span class="look-detail-icon">🎯</span><span>Books: character roles, roles written around a specific kid energy</span></div>
+        </div>
+        <div class="look-badge">The Memorable One</div>
+      </div>
+
+      <!-- Look 4 -->
+      <div class="look-card look-card-4">
+        <div class="look-priority"><div class="priority-dot"></div>Optional</div>
+        <div class="look-name">Tween / YA</div>
+        <div class="look-subtitle">A glimpse of who she's becoming</div>
+        <div class="look-body">
+          Only if time and energy allow. A slightly cooler, fashion-forward look — still age-appropriate — showing she can grow into teen roles on platforms actively casting in the 11–15 range.
+        </div>
+        <div class="look-details">
+          <div class="look-detail"><span class="look-detail-icon">👗</span><span>A step up in style — still tasteful, still genuinely her age</span></div>
+          <div class="look-detail"><span class="look-detail-icon">🎯</span><span>Books: Disney+, Netflix YA, Apple TV+ tween content</span></div>
+          <div class="look-detail"><span class="look-detail-icon">⚠️</span><span>Skip if she's tired — a flat tween photo is worse than none</span></div>
+          <div class="look-detail"><span class="look-detail-icon">📌</span><span>Capture last, only if the other three went well</span></div>
+        </div>
+        <div class="look-badge">If Energy Permits</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── WARDROBE ──────────────────────────────── -->
+  <section class="section" id="wardrobe">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">What to Wear</p>
+        <h2 class="section-title">Wardrobe <em>Guidance</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      Wardrobe should support Kennedy — never compete with her. The camera reads clothing differently than the eye does. Simple, well-fitted pieces in the right colors photograph beautifully and keep the focus exactly where it belongs: her face.
+    </p>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--ink); margin-bottom:1rem;">Colors That Work on Camera</h3>
+
+    <div class="palette-row">
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#3B6DC5;" title="Cobalt Blue"></div>
+        <span class="palette-name">Cobalt Blue</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#D96B50;" title="Coral"></div>
+        <span class="palette-name">Coral</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#C23B3B;" title="Warm Red"></div>
+        <span class="palette-name">Warm Red</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#E8B84B;" title="Soft Yellow"></div>
+        <span class="palette-name">Soft Yellow</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#40886B;" title="Teal"></div>
+        <span class="palette-name">Soft Teal</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#6B8E5A;" title="Olive Green"></div>
+        <span class="palette-name">Olive Green</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#8B2E50;" title="Burgundy"></div>
+        <span class="palette-name">Burgundy</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#8BA4B2;" title="Denim Blue"></div>
+        <span class="palette-name">Denim Blue</span>
+      </div>
+      <div class="palette-item">
+        <div class="palette-swatch" style="background:#E8DDD0;" title="Warm Cream"></div>
+        <span class="palette-name">Warm Cream</span>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--deep-rose); margin-bottom:0.6rem; margin-top:2rem;">Colors &amp; Patterns to Avoid</h3>
+    <div class="avoid-list">
+      <span class="avoid-chip">Bright White</span>
+      <span class="avoid-chip">Pure Black</span>
+      <span class="avoid-chip">Neon Colors</span>
+      <span class="avoid-chip">Busy Patterns</span>
+      <span class="avoid-chip">Logos &amp; Text</span>
+      <span class="avoid-chip">Graphic Tees</span>
+      <span class="avoid-chip">Bold Stripes</span>
+      <span class="avoid-chip">Tie-Dye</span>
+    </div>
+
+    <div class="wardrobe-section" style="margin-top: 2.5rem;">
+      <div class="wardrobe-box">
+        <div class="wardrobe-box-title">✅ Wardrobe Do's</div>
+        <ul class="wardrobe-list">
+          <li>Bring 5–6 top options for maximum flexibility on the day</li>
+          <li>Everything freshly laundered and steamed or ironed the night before</li>
+          <li>Clothes should fit her <em>today</em> — not too big, not too small</li>
+          <li>Layering pieces photograph beautifully (cardigans, light jackets, denim)</li>
+          <li>Bring a lint roller — it will be used</li>
+          <li>Simple accessories only — small earrings if she normally wears them</li>
+          <li>Let her wear what feels natural and comfortable to her</li>
+        </ul>
+      </div>
+      <div class="wardrobe-box">
+        <div class="wardrobe-box-title">📦 What to Pack</div>
+        <ul class="wardrobe-list">
+          <li>Commercial look top (bright, warm color)</li>
+          <li>Theatrical look top + a layering piece</li>
+          <li>Kennedy's personality pick — her choice</li>
+          <li>Optional: tween/YA look as a backup</li>
+          <li>2 backup tops in case lighting doesn't work with first choices</li>
+          <li>Simple bottoms that won't distract (jeans, neutral pants)</li>
+          <li>Hair accessories — both up and down options</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HAIR & STYLING ────────────────────────── -->
+  <section class="section" id="styling">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">Presentation</p>
+        <h2 class="section-title">Hair &amp; <em>Styling Notes</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      The guiding principle for an 11-year-old: keep it natural, keep it <em>her</em>. Casting directors should see what Kennedy looks like when she walks in the room. Over-styling is one of the most common — and most damaging — mistakes at this age.
+    </p>
+
+    <div class="highlight-box">
+      <div class="highlight-box-title">⚠️ The Golden Rule</div>
+      <p>Casting directors for children actively screen <em>out</em> photos where kids look made-up or over-styled. At 11, this means essentially no makeup, and hair styled exactly how Kennedy normally wears it. Less is always more.</p>
+    </div>
+
+    <div class="styling-grid">
+      <div class="styling-card">
+        <div class="styling-card-icon">💇‍♀️</div>
+        <div class="styling-card-title">Hair</div>
+        <div class="styling-card-text">Wear it how she normally wears it. Freshly washed and styled, but not over-done. Natural texture and curls are an asset — don't flatten or over-straighten. Small flyaways are fine; perfection looks artificial.</div>
+      </div>
+      <div class="styling-card">
+        <div class="styling-card-icon">💄</div>
+        <div class="styling-card-title">Makeup</div>
+        <div class="styling-card-text">Essentially none. Clear lip balm only. A light tinted moisturizer <em>if</em> needed for redness. Absolutely no foundation, eyeshadow, mascara, or contouring. If you can see it, it's too much.</div>
+      </div>
+      <div class="styling-card">
+        <div class="styling-card-icon">✨</div>
+        <div class="styling-card-title">Skin Prep</div>
+        <div class="styling-card-text">Good sleep two nights before. Hydrated the day before. No new skincare products the week prior (risk of reaction). Blemishes can be minimized lightly in editing — don't stress them.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPRESSIONS ───────────────────────────── -->
+  <section class="section" id="expressions">
+    <div class="section-header">
+      <div class="section-number">06</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">Direction</p>
+        <h2 class="section-title">Expression &amp; <em>Personality Direction</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      Ask the photographer to capture multiple expression variations within each look. A good child headshot photographer will draw these out through conversation and genuine connection — not robotic posing direction. Request these six types:
+    </p>
+
+    <div class="expression-grid">
+      <div class="expression-card ec-1">
+        <span class="expression-emoji">😁</span>
+        <div class="expression-name">Full Genuine Smile</div>
+        <div class="expression-desc">Her brightest natural smile. Commercial look. Coax it with something real — an inside joke, a funny video, her favorite thing.</div>
+      </div>
+      <div class="expression-card ec-2">
+        <span class="expression-emoji">🙂</span>
+        <div class="expression-name">Soft Closed-Mouth Smile</div>
+        <div class="expression-desc">Warm and approachable without the big grin. Works across commercial and theatrical. Warm, not neutral.</div>
+      </div>
+      <div class="expression-card ec-3">
+        <span class="expression-emoji">👁️</span>
+        <div class="expression-name">Eyes Engaged, No Smile</div>
+        <div class="expression-desc">The dramatic look. Still and present. Eyes that hold something. Think: the quiet before a big scene moment.</div>
+      </div>
+      <div class="expression-card ec-4">
+        <span class="expression-emoji">😂</span>
+        <div class="expression-name">Mid-Laugh Caught</div>
+        <div class="expression-desc">Unguarded joy. Personality look. Happens organically — the photographer should be ready for these spontaneous moments.</div>
+      </div>
+      <div class="expression-card ec-5">
+        <span class="expression-emoji">😏</span>
+        <div class="expression-name">The Knowing Smirk</div>
+        <div class="expression-desc">Playful, confident, a little cheeky. Great character look. Shows range and memorability beyond the "nice kid" lane.</div>
+      </div>
+      <div class="expression-card ec-6">
+        <span class="expression-emoji">🌿</span>
+        <div class="expression-name">Looking Off-Camera</div>
+        <div class="expression-desc">Slightly angled gaze. Editorial feel. Versatile and sophisticated without trying too hard. Works well outdoors.</div>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 2rem;">
+      <div class="highlight-box-title">📸 Note for the Photographer</div>
+      <p>The first 20–30 minutes of a child's session are rarely the best shots. Allow warm-up time for Kennedy to settle in and connect with you before expecting the most natural expressions. If energy dips, take a break — walk around, have a snack, reset. The best photos come from genuine connection, not direction.</p>
+    </div>
+  </section>
+
+  <!-- ─── BACKGROUND ────────────────────────────── -->
+  <section class="section" id="background">
+    <div class="section-header">
+      <div class="section-number">07</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">Environment</p>
+        <h2 class="section-title">Background &amp; <em>Lighting Preferences</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      Industry standard has shifted toward natural-feeling images, even in studio settings. The goal is a background that supports Kennedy's look without competing with her.
+    </p>
+
+    <div class="bg-split">
+      <div class="bg-card bg-card-studio">
+        <div class="bg-card-title">Studio / Seamless</div>
+        <div class="bg-card-sub">Best for theatrical submissions</div>
+        <ul class="wardrobe-list">
+          <li>Light grey or warm grey seamless paper — most versatile, widely accepted</li>
+          <li>Off-white works; pure white is too sterile for children</li>
+          <li>Avoid pure black — too dramatic, not appropriate for this age</li>
+          <li>Soft, diffused lighting — no harsh shadows</li>
+          <li>Catchlights in the eyes are essential — they bring life to the image</li>
+        </ul>
+      </div>
+      <div class="bg-card bg-card-outdoor">
+        <div class="bg-card-title">Environmental / Outdoor</div>
+        <div class="bg-card-sub">Best for commercial and personality looks</div>
+        <ul class="wardrobe-list">
+          <li>Soft bokeh (blurred background) — greenery, warm brick, urban texture</li>
+          <li>Golden hour light is flattering and natural for kids</li>
+          <li>Overcast days provide beautiful, even diffused light</li>
+          <li>Avoid busy or distracting backgrounds — environment should be felt, not seen</li>
+          <li>Even one outdoor look adds variety and life to the package</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 1.5rem;">
+      <div class="highlight-box-title">🎯 Industry Standard Right Now</div>
+      <p>Today's market favors natural-feeling, lifestyle-adjacent images over formal studio setups. A light grey seamless background for theatrical, and at least one organic outdoor look for commercial/personality, is the ideal mix for a 2025 child actor package.</p>
+    </div>
+  </section>
+
+  <!-- ─── MISTAKES ──────────────────────────────── -->
+  <section class="section" id="mistakes">
+    <div class="section-header">
+      <div class="section-number">08</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">What Not to Do</p>
+        <h2 class="section-title">Common Mistakes <em>to Avoid</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      These are the most common — and most costly — mistakes parents and families make with child actor headshots. Being aware of them before the session will save you money, time, and submissions.
+    </p>
+
+    <div class="mistakes-list">
+      <div class="mistake-item">
+        <div class="mistake-number">01</div>
+        <div>
+          <div class="mistake-title">Over-Styling and Over-Posing</div>
+          <div class="mistake-text">The child looks like a miniature adult, which makes casting directors uncomfortable and eliminates natural appeal. Kennedy should look like Kennedy — not a polished performance of what someone thinks a child actor looks like.</div>
+        </div>
+      </div>
+      <div class="mistake-item">
+        <div class="mistake-number">02</div>
+        <div>
+          <div class="mistake-title">Chasing Someone Else's Look</div>
+          <div class="mistake-text">Parents sometimes try to make their child look like a successful young actor they've seen. Casting directors see through this immediately, and it eliminates the most valuable thing Kennedy has: her uniqueness.</div>
+        </div>
+      </div>
+      <div class="mistake-item">
+        <div class="mistake-number">03</div>
+        <div>
+          <div class="mistake-title">Not Allowing Warm-Up Time</div>
+          <div class="mistake-text">The first 20–30 minutes of any child's shoot are rarely the best shots. Rushing into the session before Kennedy is settled and connected with the photographer will show in the photos.</div>
+        </div>
+      </div>
+      <div class="mistake-item">
+        <div class="mistake-number">04</div>
+        <div>
+          <div class="mistake-title">Choosing the Photo You Love, Not the One That Works</div>
+          <div class="mistake-text">Parents naturally gravitate to the most flattering photo. That's not always the most <em>castable</em> photo. Get a second opinion from someone with industry knowledge before final selection.</div>
+        </div>
+      </div>
+      <div class="mistake-item">
+        <div class="mistake-number">05</div>
+        <div>
+          <div class="mistake-title">Over-Retouching</div>
+          <div class="mistake-text">Light blemish reduction is fine. Smoothing skin texture, whitening teeth excessively, or altering features is not. Casting directors want to know what they're getting when Kennedy walks in the room.</div>
+        </div>
+      </div>
+      <div class="mistake-item">
+        <div class="mistake-number">06</div>
+        <div>
+          <div class="mistake-title">Not Updating Photos Regularly</div>
+          <div class="mistake-text">Children change quickly. Photos should be updated every 12–18 months, or whenever there's a significant appearance change. Using outdated headshots when Kennedy walks into a room is a serious credibility problem.</div>
+        </div>
+      </div>
+      <div class="mistake-item">
+        <div class="mistake-number">07</div>
+        <div>
+          <div class="mistake-title">Treating It Like a Portrait Session, Not an Industry Tool</div>
+          <div class="mistake-text">This is not a family photo or school picture. Every decision — wardrobe, expression, background, crop — should be made through the lens of what casting directors need to see. Beautiful and castable are not always the same thing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CHECKLIST ─────────────────────────────── -->
+  <section class="section" id="checklist">
+    <div class="section-header">
+      <div class="section-number">09</div>
+      <div class="section-title-group">
+        <p class="section-eyebrow">Session Plan</p>
+        <h2 class="section-title">Shot List &amp; <em>Session Checklist</em></h2>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <p class="section-lead">
+      Use this checklist to stay organized and ensure you capture everything you need. Items can be checked off as you go.
+    </p>
+
+    <div class="checklist-grid">
+
+      <div class="checklist-box">
+        <div class="checklist-box-title"><span>📦</span> Pack the Night Before</div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">All wardrobe options freshly steamed/ironed</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Lint roller packed</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Hair products she normally uses</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Clear lip balm only</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Snacks and water for energy management</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">A few things that make Kennedy laugh</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Backup accessories (earrings, headband)</div></div>
+      </div>
+
+      <div class="checklist-box">
+        <div class="checklist-box-title"><span>☀️</span> Day-Of Mindset</div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Arrive early — no rushing, allow time to settle in</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Let Kennedy explore the space before shooting</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Keep energy light and fun — this is an adventure</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Let the photographer lead — don't art-direct</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Take breaks if energy or connection dips</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Trust Kennedy's instincts on her personality look</div></div>
+      </div>
+
+      <div class="checklist-box">
+        <div class="checklist-box-title"><span>📸</span> Shot List — Must Captures</div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Look 1: Commercial — full genuine smile</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Look 1: Commercial — soft closed-mouth smile</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Look 2: Theatrical — eyes engaged, no smile</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Look 2: Theatrical — looking slightly off-camera</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Look 3: Personality — whatever is most her</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Mid-laugh / unguarded moments (any look)</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Optional: Look 4 — tween/YA if energy allows</div></div>
+      </div>
+
+      <div class="checklist-box">
+        <div class="checklist-box-title"><span>🖼️</span> After the Session</div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Rest before reviewing — don't decide same night</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Narrow to top 10–15 favorites without overthinking</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Ask Kennedy which feel most like her</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Get outside opinion (coach, industry contact)</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Select 2–4 final images for primary submission use</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Confirm high-res files + web-optimized versions received</div></div>
+        <div class="check-item" onclick="this.classList.toggle('checked')"><div class="check-box"></div><div class="check-label">Upload to casting platforms (Actors Access, Casting Networks)</div></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ─── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <strong>Kennedy · Headshot Session · May 30, 2025</strong>
+  Prepared for the photographer and Kennedy's family &nbsp;·&nbsp; Confidential career planning document<br />
+  <span style="margin-top: 0.5rem; display: block; font-size: 0.65rem; opacity: 0.5; letter-spacing: 0.15em;">FILM · TELEVISION · STREAMING · COMMERCIALS</span>
+</footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        const offset = 60;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Active nav highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-inner a');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.style.color = link.getAttribute('href') === '#' + entry.target.id
+            ? 'var(--rose)' : '';
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

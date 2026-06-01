@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kennedy · After the Shoot · Headshot Assembly Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f7f4ef;
+  --surface:#ffffff;
+  --surface2:#f0ece4;
+  --ink:#1c1917;
+  --body:#44403c;
+  --muted:#78716c;
+  --rule:#e7e2da;
+  --sage:#4a7c59;
+  --sage-light:#e8f0eb;
+  --sage-mid:#c2d9c9;
+  --amber:#b45309;
+  --amber-light:#fef3c7;
+  --amber-mid:#fcd34d;
+  --rose:#9f3b3b;
+  --rose-light:#fce8e8;
+  --slate:#334155;
+  --slate-light:#e8edf3;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--body);font-family:'Inter',sans-serif;font-weight:300;line-height:1.75;overflow-x:hidden}
+
+/* HERO */
+.hero{
+  min-height:92vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  position:relative;
+}
+@media(max-width:700px){.hero{grid-template-columns:1fr;min-height:auto}}
+.hero-left{
+  background:var(--ink);
+  padding:5rem 4rem 5rem 5vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero-left::after{
+  content:'';
+  position:absolute;
+  bottom:-80px;right:-80px;
+  width:320px;height:320px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(74,124,89,.25) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-eyebrow{
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--sage-mid);font-weight:500;margin-bottom:1.5rem;
+  opacity:0;animation:fadeLeft .7s ease forwards .15s;
+}
+.hero-title{
+  font-family:'Libre Baskerville',serif;
+  font-size:clamp(2.4rem,5vw,4rem);
+  font-weight:700;line-height:1.05;
+  color:#f7f4ef;margin-bottom:1rem;
+  opacity:0;animation:fadeLeft .8s ease forwards .3s;
+}
+.hero-title em{font-style:italic;color:#86b899}
+.hero-sub{
+  font-size:.95rem;color:#a8a29e;
+  max-width:380px;line-height:1.8;margin-bottom:2.5rem;
+  opacity:0;animation:fadeLeft .8s ease forwards .45s;
+}
+.hero-steps-preview{
+  display:flex;flex-direction:column;gap:.5rem;
+  opacity:0;animation:fadeLeft .8s ease forwards .6s;
+}
+.hsp-item{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:.8rem;color:#78716c;
+}
+.hsp-dot{width:6px;height:6px;border-radius:50%;background:var(--sage-mid);flex-shrink:0}
+.hero-right{
+  background:var(--surface2);
+  padding:5rem 5vw 5rem 4rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.hero-right::before{
+  content:'✦';
+  font-size:14rem;color:rgba(74,124,89,.06);
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;font-family:serif;
+}
+.stat-stack{display:flex;flex-direction:column;gap:1.5rem;position:relative;z-index:1}
+.stat-item{
+  border-left:2px solid var(--rule);
+  padding-left:1.5rem;
+  opacity:0;
+}
+.stat-item:nth-child(1){animation:fadeRight .7s ease forwards .4s}
+.stat-item:nth-child(2){animation:fadeRight .7s ease forwards .55s}
+.stat-item:nth-child(3){animation:fadeRight .7s ease forwards .7s}
+.stat-item:nth-child(4){animation:fadeRight .7s ease forwards .85s}
+.stat-item:nth-child(5){animation:fadeRight .7s ease forwards 1s}
+.stat-item:nth-child(6){animation:fadeRight .7s ease forwards 1.15s}
+.stat-num{font-family:'Libre Baskerville',serif;font-size:2.2rem;font-weight:700;color:var(--ink);line-height:1}
+.stat-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:700px){
+  .hero-left,.hero-right{padding:3rem 1.5rem}
+  .hero-right::before{display:none}
+  .stat-stack{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav-inner{display:flex;max-width:1100px;margin:0 auto;padding:0 2rem;overflow-x:auto;white-space:nowrap}
+.nav-inner a{display:block;padding:.85rem 1rem;font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;border-bottom:2px solid transparent}
+.nav-inner a:hover,.nav-inner a.active{color:var(--sage);border-bottom-color:var(--sage)}
+
+/* LAYOUT */
+main{max-width:1100px;margin:0 auto;padding:0 2rem 8rem}
+
+/* SECTION */
+.section{padding:5.5rem 0 1.5rem}
+.s-flag{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:2rem}
+.s-flag-line{width:32px;height:2px;background:currentColor}
+.s-flag-text{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase}
+.s-title{font-family:'Libre Baskerville',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:1.25rem}
+.s-title em{font-style:italic}
+.s-lead{font-size:.96rem;color:var(--muted);max-width:660px;line-height:1.85;margin-bottom:2.5rem}
+.s-rule{height:1px;background:var(--rule);margin-bottom:3rem}
+
+/* STEP CARDS */
+.steps{display:flex;flex-direction:column;gap:1px;background:var(--rule);border-radius:16px;overflow:hidden;border:1px solid var(--rule)}
+.step{background:var(--surface);padding:2rem 2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;transition:background .2s}
+.step:hover{background:#fdfcfa}
+.step-left{display:flex;flex-direction:column;align-items:center;gap:.75rem}
+.step-num{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;flex-shrink:0}
+.step-line{width:1px;flex:1;min-height:20px;background:var(--rule)}
+.step:last-child .step-line{display:none}
+.step-title{font-family:'Libre Baskerville',serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;display:flex;align-items:center;gap:.75rem}
+.step-badge{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .65rem;border-radius:100px}
+.step-body{font-size:.875rem;color:var(--body);line-height:1.8;margin-bottom:1rem}
+.step-list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.step-list li{font-size:.85rem;color:var(--body);display:flex;gap:.65rem;align-items:flex-start;line-height:1.5}
+.step-list li::before{content:'→';font-size:.75rem;flex-shrink:0;margin-top:.15rem;font-weight:600}
+.step-note{background:var(--surface2);border-radius:8px;padding:.85rem 1.1rem;font-size:.82rem;color:var(--muted);line-height:1.65;margin-top:.85rem;border-left:3px solid var(--rule)}
+@media(max-width:640px){
+  .step{grid-template-columns:1fr;gap:1rem}
+  .step-left{flex-direction:row;align-items:center}
+  .step-line{display:none}
+}
+
+/* SELECTION TABLE */
+.sel-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.865rem}
+.sel-table th{text-align:left;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:.75rem 1rem;background:var(--surface2);border-bottom:2px solid var(--rule)}
+.sel-table td{padding:.85rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.6}
+.sel-table tr:last-child td{border-bottom:none}
+.sel-table tr:hover td{background:var(--bg)}
+.sel-q{color:var(--ink);font-weight:500}
+.sel-a{color:var(--muted)}
+
+/* SPEC BOX */
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+@media(max-width:640px){.spec-grid{grid-template-columns:1fr 1fr}}
+.spec-card{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:1.25rem;text-align:center}
+.spec-value{font-family:'Libre Baskerville',serif;font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.spec-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* RETOUCH */
+.retouch-split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.retouch-split{grid-template-columns:1fr}}
+.rt-box{border-radius:12px;padding:1.5rem}
+.rt-yes{background:var(--sage-light);border:1px solid var(--sage-mid)}
+.rt-no{background:var(--rose-light);border:1px solid rgba(159,59,59,.2)}
+.rt-title{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem;padding-bottom:.6rem;border-bottom:1px solid}
+.rt-yes .rt-title{color:var(--sage);border-color:var(--sage-mid)}
+.rt-no .rt-title{color:var(--rose);border-color:rgba(159,59,59,.2)}
+.rt-list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.rt-list li{font-size:.855rem;display:flex;gap:.6rem;align-items:flex-start;line-height:1.5}
+.rt-yes .rt-list li::before{content:'✓';color:var(--sage);font-weight:700;flex-shrink:0;font-size:.8rem}
+.rt-no .rt-list li::before{content:'✕';color:var(--rose);font-weight:700;flex-shrink:0;font-size:.8rem}
+
+/* PLATFORM UPLOAD */
+.platform-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem}
+@media(max-width:600px){.platform-row{grid-template-columns:1fr}}
+.plat{border-radius:12px;padding:1.5rem}
+.plat-aa{background:var(--slate-light);border:1px solid rgba(51,65,85,.15)}
+.plat-cn{background:#f3f0fa;border:1px solid rgba(107,74,182,.15)}
+.plat-name{font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.75rem}
+.plat-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.plat-list li{font-size:.82rem;display:flex;gap:.6rem;line-height:1.5}
+.plat-aa .plat-list li::before{content:'·';color:var(--slate);font-weight:700;flex-shrink:0}
+.plat-cn .plat-list li::before{content:'·';color:#6b4ab6;font-weight:700;flex-shrink:0}
+
+/* CALLOUT */
+.callout{border-radius:14px;padding:1.75rem 2rem;margin:2rem 0;display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:start}
+.callout-sage{background:var(--sage-light);border:1px solid var(--sage-mid)}
+.callout-amber{background:var(--amber-light);border:1px solid rgba(180,83,9,.2)}
+.callout-icon{font-size:1.4rem}
+.callout-title{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.4rem}
+.callout-sage .callout-title{color:var(--sage)}
+.callout-amber .callout-title{color:var(--amber)}
+.callout-text{font-size:.875rem;color:var(--ink);line-height:1.75}
+
+/* CHECKLIST */
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.check-grid{grid-template-columns:1fr}}
+.check-box-card{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:1.75rem}
+.cbc-title{font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:1.1rem;padding-bottom:.75rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.5rem}
+.ci{display:flex;align-items:flex-start;gap:.7rem;padding:.5rem 0;border-bottom:1px solid var(--rule);cursor:pointer;transition:background .15s;border-radius:4px;padding-left:2px}
+.ci:last-child{border-bottom:none}
+.ci:hover{background:var(--bg)}
+.ci-box{width:18px;height:18px;border:1.5px solid var(--rule);border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s;background:white}
+.ci.checked .ci-box{background:var(--sage);border-color:var(--sage)}
+.ci.checked .ci-box::after{content:'✓';color:white;font-size:.65rem;font-weight:700}
+.ci.checked .ci-label{text-decoration:line-through;color:var(--muted)}
+.ci-label{font-size:.855rem;color:var(--body);line-height:1.5}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.45);text-align:center;padding:3rem 2rem;font-size:.75rem;letter-spacing:.08em}
+footer strong{font-family:'Libre Baskerville',serif;font-size:1rem;color:rgba(255,255,255,.85);display:block;margin-bottom:.4rem;font-weight:400}
+
+/* SAGE = step 1,2 | AMBER = step 3,4 | SLATE = step 5,6 */
+.n-sage{background:var(--sage-light);color:var(--sage)}
+.n-amber{background:var(--amber-light);color:var(--amber)}
+.n-slate{background:var(--slate-light);color:var(--slate)}
+.b-sage{background:rgba(74,124,89,.1);color:var(--sage)}
+.b-amber{background:rgba(180,83,9,.1);color:var(--amber)}
+.b-slate{background:rgba(51,65,85,.1);color:var(--slate)}
+.l-sage::before{color:var(--sage)!important}
+.l-amber::before{color:var(--amber)!important}
+.l-slate::before{color:var(--slate)!important}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Post-Session Guide · Kennedy</p>
+    <h1 class="hero-title">After the<br><em>Shoot</em></h1>
+    <p class="hero-sub">Your step-by-step guide to going from a photographer's gallery to submission-ready headshots on casting platforms.</p>
+    <div class="hero-steps-preview">
+      <div class="hsp-item"><div class="hsp-dot"></div><span>Get your files from the photographer</span></div>
+      <div class="hsp-item"><div class="hsp-dot"></div><span>Make your selects</span></div>
+      <div class="hsp-item"><div class="hsp-dot"></div><span>Request retouching</span></div>
+      <div class="hsp-item"><div class="hsp-dot"></div><span>Format for submissions</span></div>
+      <div class="hsp-item"><div class="hsp-dot"></div><span>Upload to casting platforms</span></div>
+      <div class="hsp-item"><div class="hsp-dot"></div><span>Pair with your résumé</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-stack">
+      <div class="stat-item">
+        <div class="stat-num">2–4</div>
+        <div class="stat-label">Final edited images to select</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8×10</div>
+        <div class="stat-label">Industry standard crop</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">300dpi</div>
+        <div class="stat-label">Minimum print resolution</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24 hrs</div>
+        <div class="stat-label">Wait before reviewing proofs</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12–18</div>
+        <div class="stat-label">Months these photos will serve her</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Platform profiles to upload to</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#get-files">Get Files</a>
+    <a href="#selects">Make Selects</a>
+    <a href="#retouching">Retouching</a>
+    <a href="#format">Format</a>
+    <a href="#upload">Upload</a>
+    <a href="#resume">Résumé</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- INTRO -->
+<section class="section" style="padding-top:4rem">
+  <div class="s-flag" style="color:var(--sage)"><div class="s-flag-line"></div><span class="s-flag-text">You did it</span></div>
+  <h2 class="s-title">The shoot is done.<br><em>Now here's what happens next.</em></h2>
+  <p class="s-lead">The photography session is the exciting part — but the work that happens in the days after is what actually gets Kennedy in front of casting directors. This guide walks you through every step from raw gallery to live submission profile.</p>
+  <div class="s-rule"></div>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">⏳</div>
+    <div>
+      <div class="callout-title">Do Not Rush This</div>
+      <div class="callout-text">The most common mistake after a shoot is making final photo decisions while emotions are still running high. <strong>Wait at least one full night before reviewing proofs.</strong> You'll see the photos more clearly — and more like a casting director — with fresh eyes.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="get-files" style="scroll-margin-top:55px">
+<div class="steps">
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-left">
+      <div class="step-num n-sage">1</div>
+      <div class="step-line"></div>
+    </div>
+    <div>
+      <div class="step-title">
+        Get Your Files From the Photographer
+        <span class="step-badge b-sage">Do First</span>
+      </div>
+      <div class="step-body">Before anything else, make sure you have everything you're owed. Galleries expire, links get lost, and photographers get busy. Download your files as soon as they're delivered.</div>
+      <ul class="step-list">
+        <li class="l-sage">Confirm you're receiving a <strong>gallery link</strong> (Pixieset, Shootproof, Google Drive, or similar)</li>
+        <li class="l-sage">Download <strong>all proofs immediately</strong> — don't wait, gallery links expire</li>
+        <li class="l-sage">Verify the files are <strong>high-resolution JPEGs</strong> — not compressed web previews or thumbnails</li>
+        <li class="l-sage">Confirm how many <strong>final edited selects</strong> are included in your package (typically 2–4)</li>
+        <li class="l-sage">Ask about <strong>turnaround time</strong> for retouched finals if not yet delivered</li>
+      </ul>
+      <div class="step-note">💾 Back up immediately: copy proofs to Google Drive or an external drive. Do not rely on the photographer's gallery link as your only copy after it expires.</div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step" id="selects">
+    <div class="step-left">
+      <div class="step-num n-sage">2</div>
+      <div class="step-line"></div>
+    </div>
+    <div>
+      <div class="step-title">
+        Make Your Selects
+        <span class="step-badge b-sage">Most Important Step</span>
+      </div>
+      <div class="step-body">This is where you narrow hundreds of proofs down to the 2–4 photos that will represent Kennedy for the next year or more. Take your time. Use this process:</div>
+      <ul class="step-list">
+        <li class="l-sage"><strong>First pass:</strong> Flag everything with potential — aim for 15–20 images without overthinking</li>
+        <li class="l-sage"><strong>Second pass:</strong> Narrow to your top 8–10 based on expression and energy alone. Ignore minor technical issues at this stage.</li>
+        <li class="l-sage"><strong>Third pass:</strong> Choose your final 2–4 using the selection criteria below</li>
+        <li class="l-sage"><strong>Get a second opinion</strong> from someone with industry experience — a drama coach, acting teacher, or trusted industry contact</li>
+        <li class="l-sage"><strong>Ask Kennedy</strong> which ones feel most like her — her instinct genuinely matters here</li>
+      </ul>
+
+      <table class="sel-table">
+        <thead>
+          <tr>
+            <th>Ask yourself</th>
+            <th>What you're looking for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sel-q">Do her eyes have life in them?</td>
+            <td class="sel-a">Non-negotiable. Eyes that are flat, tired, or disconnected are a hard pass regardless of everything else.</td>
+          </tr>
+          <tr>
+            <td class="sel-q">Does this look like <em>her</em>?</td>
+            <td class="sel-a">Not posed, not performed. If you can see the effort, it's not the photo. Find the ones where she forgot the camera was there.</td>
+          </tr>
+          <tr>
+            <td class="sel-q">Does the expression match the look?</td>
+            <td class="sel-a">Commercial = genuine warm smile. Theatrical = present and still. Personality = authentically herself.</td>
+          </tr>
+          <tr>
+            <td class="sel-q">Would you stop scrolling if you saw this?</td>
+            <td class="sel-a">Gut check. Casting directors spend 2–3 seconds per photo. Does this one earn a click?</td>
+          </tr>
+          <tr>
+            <td class="sel-q">Is this the most flattering OR most castable?</td>
+            <td class="sel-a">These aren't always the same. Parents pick flattering. Casting directors need castable. When in doubt, get that outside opinion.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-sage" style="margin-top:1rem;margin-bottom:0">
+        <div class="callout-icon">🎯</div>
+        <div>
+          <div class="callout-title">What to Select for Each Lane</div>
+          <div class="callout-text">You want at minimum: <strong>one commercial look</strong> (big genuine smile, bright energy) and <strong>one theatrical look</strong> (eyes alive, no big smile, present and real). If the personality shot is strong, that's a valuable third. Only use the tween/YA look if it's genuinely competitive — a weak fourth photo doesn't help.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step" id="retouching">
+    <div class="step-left">
+      <div class="step-num n-amber">3</div>
+      <div class="step-line"></div>
+    </div>
+    <div>
+      <div class="step-title">
+        Request Your Retouching
+        <span class="step-badge b-amber">Send to Photographer</span>
+      </div>
+      <div class="step-body">Once you've made your selects, send the file numbers back to the photographer for final editing. For an 11-year-old, the industry standard is minimal, natural retouching. Be explicit about what you want — and what you don't.</div>
+      <div class="retouch-split">
+        <div class="rt-box rt-yes">
+          <div class="rt-title">✓ Request These</div>
+          <ul class="rt-list">
+            <li>Light blemish and spot reduction</li>
+            <li>Minor flyaway hair cleanup</li>
+            <li>Subtle brightness and contrast polish</li>
+            <li>Eye clarity and light enhancement</li>
+            <li>Color correction and white balance</li>
+            <li>Slight shadow reduction under eyes if needed</li>
+          </ul>
+        </div>
+        <div class="rt-box rt-no">
+          <div class="rt-title">✕ Decline These</div>
+          <ul class="rt-list">
+            <li>Skin smoothing or texture removal</li>
+            <li>Heavy teeth whitening</li>
+            <li>Feature alteration of any kind</li>
+            <li>Frequency separation or heavy airbrushing</li>
+            <li>Eye color changes or exaggeration</li>
+            <li>Body reshaping or slimming</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step-note">📦 Ask for two versions of each final image: <strong>high-resolution (300 DPI)</strong> for print and physical submissions, and <strong>web-optimized (72 DPI, under 10MB)</strong> for casting platform uploads. Name convention: <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-size:.8rem">Kennedy_LastName_Commercial.jpg</code></div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step" id="format">
+    <div class="step-left">
+      <div class="step-num n-amber">4</div>
+      <div class="step-line"></div>
+    </div>
+    <div>
+      <div class="step-title">
+        Format for Submissions
+        <span class="step-badge b-amber">Technical</span>
+      </div>
+      <div class="step-body">Industry standard specs haven't changed much in years. Make sure your final files meet these requirements before uploading anywhere. If you need to crop or resize, use Canva (free) or Lightroom — and never upscale a low-resolution file.</div>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-value">8 × 10"</div>
+          <div class="spec-label">Standard crop</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">300 dpi</div>
+          <div class="spec-label">Print minimum</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">72 dpi</div>
+          <div class="spec-label">Digital / web</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">JPEG</div>
+          <div class="spec-label">File format</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">&lt;10 MB</div>
+          <div class="spec-label">Platform upload max</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-value">60–70%</div>
+          <div class="spec-label">Face fills frame</div>
+        </div>
+      </div>
+
+      <ul class="step-list" style="margin-top:1rem">
+        <li class="l-amber">Head and shoulders only — full body shots are not headshots</li>
+        <li class="l-amber">No borders, text overlays, watermarks, or graphic elements on the image</li>
+        <li class="l-amber">Eyes should land roughly in the upper third of the frame</li>
+        <li class="l-amber">If your photographer delivered a different crop, ask them to adjust — or use Canva's 8×10 template to re-crop yourself</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step" id="upload">
+    <div class="step-left">
+      <div class="step-num n-slate">5</div>
+      <div class="step-line"></div>
+    </div>
+    <div>
+      <div class="step-title">
+        Upload to Casting Platforms
+        <span class="step-badge b-slate">Go Live</span>
+      </div>
+      <div class="step-body">This is where Kennedy becomes visible to casting directors. Your two priority platforms for the DC/Baltimore market are Actors Access and Casting Networks. Upload to both.</div>
+
+      <div class="platform-row">
+        <div class="plat plat-aa">
+          <div class="plat-name">Actors Access</div>
+          <ul class="plat-list">
+            <li>Go to actorsaccess.com → login → Photos</li>
+            <li>Upload primary headshot as your <strong>lead image</strong></li>
+            <li>Add 2–3 alternate looks as secondary images</li>
+            <li>Label each photo by category (commercial / theatrical)</li>
+            <li>Best for: film, TV, streaming breakdowns</li>
+          </ul>
+        </div>
+        <div class="plat plat-cn">
+          <div class="plat-name">Casting Networks</div>
+          <ul class="plat-list">
+            <li>Go to app.castingnetworks.com → login → Profile</li>
+            <li>Upload under the Photos section — same primary image strategy</li>
+            <li>Complete all physical fields (they filter by these)</li>
+            <li>Label each look category clearly</li>
+            <li>Best for: commercials, regional, print work</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-sage" style="margin-top:1.25rem;margin-bottom:0">
+        <div class="callout-icon">📸</div>
+        <div>
+          <div class="callout-title">Primary Photo Strategy</div>
+          <div class="callout-text">Use your strongest <strong>commercial</strong> look as the lead on both platforms — it casts the widest net. Casting directors scroll fast. Your lead photo has about 2 seconds to earn a click. Save theatrical and personality shots as secondary images — they expand Kennedy's range for casting directors who click through.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step" id="resume" style="border-bottom:none">
+    <div class="step-left">
+      <div class="step-num n-slate">6</div>
+      <div class="step-line"></div>
+    </div>
+    <div>
+      <div class="step-title">
+        Pair With a Résumé
+        <span class="step-badge b-slate">Complete the Package</span>
+      </div>
+      <div class="step-body">A headshot without a résumé is an incomplete submission. Every casting platform profile needs a résumé attached, and every physical submission prints it on the back of the headshot. If Kennedy doesn't have a formal résumé yet, now is the time.</div>
+      <ul class="step-list">
+        <li class="l-slate">Build the résumé using the Career Playbook template (separate document in this series)</li>
+        <li class="l-slate">Export as a <strong>PDF</strong> — name it <code style="background:var(--surface2);padding:.1rem .4rem;border-radius:4px;font-size:.8rem">Kennedy_LastName_Resume.pdf</code></li>
+        <li class="l-slate">Attach to both Actors Access and Casting Networks profiles</li>
+        <li class="l-slate">For physical submissions: print résumé trimmed to 8×10, stapled to the back of the headshot</li>
+        <li class="l-slate">A sparse résumé is completely fine at 11 — training and participation count. Never fabricate or exaggerate credits.</li>
+      </ul>
+
+      <div class="step-note">
+        <strong>What goes on a child actor résumé at this stage:</strong> Name · Age range · Physical stats · Union status (Non-Union) · Any theater credits (school plays, community theater) · Training (acting classes, workshops) · Special skills (sports, instruments, accents, anything distinctive) · Parent contact info
+      </div>
+    </div>
+  </div>
+
+</div><!-- /steps -->
+</section>
+
+<!-- CHECKLIST -->
+<section class="section" id="checklist">
+  <div class="s-flag" style="color:var(--sage)"><div class="s-flag-line"></div><span class="s-flag-text">Final Checklist</span></div>
+  <h2 class="s-title">Everything Done?<br><em>Check It Off.</em></h2>
+  <p class="s-lead">Use this as your completion checklist. Every item here checked off means Kennedy has a complete, professional submission package ready to go.</p>
+  <div class="s-rule"></div>
+
+  <div class="check-grid">
+    <div class="check-box-card">
+      <div class="cbc-title"><span>📂</span> Files &amp; Selects</div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">All proofs downloaded from photographer gallery</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Proofs backed up to Google Drive or external drive</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Waited at least one night before reviewing</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Narrowed proofs to top 15–20 favorites</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Got a second opinion from someone with industry experience</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Asked Kennedy which feel most like her</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Final 2–4 selects chosen (1 commercial + 1 theatrical minimum)</div></div>
+    </div>
+
+    <div class="check-box-card">
+      <div class="cbc-title"><span>🎨</span> Retouching &amp; Files</div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Sent final file numbers to photographer for retouching</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Specified natural retouching only (no skin smoothing)</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Requested both high-res (print) and web-optimized versions</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Final edited files received and downloaded</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Files named correctly (Kennedy_LastName_Commercial.jpg)</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Confirmed 8×10 crop and correct resolution</div></div>
+    </div>
+
+    <div class="check-box-card">
+      <div class="cbc-title"><span>🌐</span> Platform Profiles</div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Actors Access profile created and complete</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Primary headshot uploaded to Actors Access</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Alternate looks uploaded and labeled on Actors Access</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Casting Networks profile created and complete</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Headshots uploaded and labeled on Casting Networks</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Market set to DC / Baltimore on both platforms</div></div>
+    </div>
+
+    <div class="check-box-card">
+      <div class="cbc-title"><span>📄</span> Résumé &amp; Package</div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Résumé built with correct industry formatting</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Résumé exported as PDF (Kennedy_LastName_Resume.pdf)</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Résumé attached to Actors Access profile</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Résumé attached to Casting Networks profile</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Physical print copies ordered (optional, for agent submissions)</div></div>
+      <div class="ci" onclick="this.classList.toggle('checked')"><div class="ci-box"></div><div class="ci-label">Ready to start submitting and auditioning 🎉</div></div>
+    </div>
+  </div>
+
+  <div class="callout callout-sage" style="margin-top:2rem">
+    <div class="callout-icon">🎬</div>
+    <div>
+      <div class="callout-title">You're Ready</div>
+      <div class="callout-text">Once this checklist is complete, Kennedy has a professional, submission-ready package that can hold its own in the DC/Baltimore market. These photos will open doors — for auditions, agent interest, and casting conversations. The next step is activating the package with consistent submissions. See the <strong>Career Playbook</strong> for the full 90-day activation plan.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>Kennedy · After the Shoot · Post-Session Assembly Guide</strong>
+  Part of the Kennedy Career Document Series &nbsp;·&nbsp; DC / Baltimore Market
+  <span style="display:block;margin-top:.4rem;font-size:.65rem;opacity:.4;letter-spacing:.15em">HEADSHOT ASSEMBLY · PLATFORM SETUP · SUBMISSION PACKAGE</span>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-55,behavior:'smooth'});
+  });
+});
+const secs=document.querySelectorAll('[id]');
+const links=document.querySelectorAll('.nav-inner a');
+new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)links.forEach(l=>{
+      l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);
+    });
+  });
+},{rootMargin:'-20% 0px -70% 0px'}).observe(document.querySelector('main'));
+secs.forEach(s=>{
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting)links.forEach(l=>{
+        if(l.getAttribute('href')==='#'+e.target.id)l.classList.add('active');
+      });
+    });
+  },{rootMargin:'-30% 0px -60% 0px'}).observe(s);
+});
+</script>
+</body>
+</html>

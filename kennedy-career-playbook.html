@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kennedy · Career Playbook · DC/Baltimore</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0f1117;
+  --bg:#080b12;
+  --surface:#111520;
+  --surface2:#181e2e;
+  --border:rgba(255,255,255,0.07);
+  --gold:#e8c46a;
+  --gold-dim:#b8942a;
+  --teal:#4ecdc4;
+  --teal-dim:#2a8f88;
+  --rose:#f7826e;
+  --rose-dim:#c0503c;
+  --lavender:#a78bfa;
+  --lav-dim:#6d4fc4;
+  --text:#d4d8e8;
+  --muted:#6b7394;
+  --bright:#f0f3ff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(78,205,196,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(78,205,196,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,196,106,0.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-60%);pointer-events:none}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(78,205,196,0.08) 0%,transparent 70%);bottom:-100px;right:-100px;pointer-events:none}
+.hero-eyebrow{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);margin-bottom:1.5rem;opacity:0;animation:fadeUp .7s ease forwards .1s}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,10vw,7rem);font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--bright);margin-bottom:.75rem;opacity:0;animation:fadeUp .8s ease forwards .25s}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.5vw,1.4rem);font-style:italic;color:var(--muted);margin-bottom:3rem;opacity:0;animation:fadeUp .8s ease forwards .4s}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;opacity:0;animation:fadeUp .8s ease forwards .55s}
+.chip{padding:.4rem 1.1rem;border-radius:100px;font-size:.72rem;font-weight:500;letter-spacing:.08em;border:1px solid;transition:transform .2s}
+.chip:hover{transform:translateY(-2px)}
+.chip-gold{background:rgba(232,196,106,.1);border-color:rgba(232,196,106,.25);color:var(--gold)}
+.chip-teal{background:rgba(78,205,196,.08);border-color:rgba(78,205,196,.2);color:var(--teal)}
+.chip-rose{background:rgba(247,130,110,.08);border-color:rgba(247,130,110,.2);color:var(--rose)}
+.chip-lav{background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.2);color:var(--lavender)}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);opacity:0;animation:fadeUp .8s ease forwards 1s;display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.scroll-hint span{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.scroll-bar{width:1px;height:36px;background:linear-gradient(to bottom,var(--gold),transparent);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(8,11,18,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 2rem;overflow-x:auto}
+.nav-inner{display:flex;max-width:1200px;margin:0 auto;white-space:nowrap}
+.nav-inner a{display:block;padding:.9rem 1rem;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s;border-bottom:2px solid transparent}
+.nav-inner a:hover,.nav-inner a.active{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── LAYOUT ── */
+main{max-width:1200px;margin:0 auto;padding:0 2rem 8rem}
+
+/* ── SECTION ── */
+.section{padding:6rem 0 2rem}
+.s-head{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;margin-bottom:1rem}
+.s-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:700;line-height:1;color:rgba(255,255,255,.05)}
+.s-eyebrow{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:.4rem;font-weight:500}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.1;color:var(--bright)}
+.s-title em{font-style:italic}
+.s-lead{font-size:.975rem;color:var(--muted);max-width:700px;margin:1.5rem 0 2.5rem;line-height:1.85}
+.s-divider{height:1px;background:linear-gradient(to right,var(--border),transparent);margin-bottom:3rem}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,0,0,.4)}
+.card-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--bright);margin-bottom:.75rem}
+.card-text{font-size:.875rem;color:var(--muted);line-height:1.75}
+
+/* ── RESUME ── */
+.resume-wrap{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.resume-toolbar{background:var(--surface2);border-bottom:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+.resume-toolbar-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.resume-toolbar-btns{display:flex;gap:.5rem}
+.btn{padding:.45rem 1.1rem;border-radius:8px;font-size:.75rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif;letter-spacing:.04em}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--muted)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-gold{background:var(--gold);border:none;color:#0f1117;font-weight:600}
+.btn-gold:hover{background:#f0d080}
+.btn-teal{background:var(--teal);border:none;color:#0f1117;font-weight:600}
+.btn-teal:hover{background:#7ee8e2}
+
+/* Resume document */
+#resume-doc{padding:3rem;font-family:'Outfit',sans-serif;max-width:780px;margin:0 auto}
+.r-name{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--bright);letter-spacing:-.01em;text-align:center;margin-bottom:.3rem}
+.r-tagline{text-align:center;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.r-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.5rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.r-bar-item{font-size:.8rem;color:var(--text);display:flex;gap:.35rem;align-items:center}
+.r-bar-item strong{color:var(--muted);font-weight:400;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.r-section{margin-bottom:1.75rem}
+.r-section-title{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid rgba(232,196,106,.2)}
+.r-row{display:grid;grid-template-columns:1fr auto;gap:1rem;margin-bottom:.5rem;align-items:baseline}
+.r-role{font-size:.88rem;color:var(--bright);font-weight:400}
+.r-where{font-size:.8rem;color:var(--text)}
+.r-year{font-size:.78rem;color:var(--muted);text-align:right;white-space:nowrap}
+.r-skills{display:flex;flex-wrap:wrap;gap:.4rem}
+.r-skill{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:.25rem .75rem;font-size:.78rem;color:var(--text)}
+.r-contact{text-align:center;font-size:.78rem;color:var(--muted);margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.editable{border-bottom:1px dashed rgba(78,205,196,.3);outline:none;transition:border-color .2s;min-width:20px;display:inline-block}
+.editable:focus{border-bottom-color:var(--teal);color:var(--bright)}
+.editable:empty:before{content:attr(data-placeholder);color:var(--muted);pointer-events:none}
+
+/* ── PLATFORMS ── */
+.platform-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:640px){.platform-grid{grid-template-columns:1fr}}
+.platform-card{border-radius:16px;padding:2rem;border:1px solid}
+.p-aa{background:linear-gradient(145deg,#0e1a2e,#111d30);border-color:rgba(78,130,255,.2)}
+.p-cn{background:linear-gradient(145deg,#1a0e1e,#1e1128);border-color:rgba(167,100,255,.2)}
+.p-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--bright);margin-bottom:.3rem}
+.p-aa .p-logo em{color:#4e82ff}
+.p-cn .p-logo em{color:#a764ff}
+.p-sub{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem}
+.p-aa .p-sub{color:rgba(78,130,255,.6)}
+.p-cn .p-sub{color:rgba(167,100,255,.6)}
+.step-list{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.step-list li{display:flex;gap:.75rem;align-items:flex-start;font-size:.855rem;line-height:1.55}
+.step-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:600;margin-top:.1rem}
+.p-aa .step-num{background:rgba(78,130,255,.15);color:#4e82ff}
+.p-cn .step-num{background:rgba(167,100,255,.15);color:#a764ff}
+.cost-badge{display:inline-block;margin-top:1.25rem;padding:.3rem .9rem;border-radius:100px;font-size:.7rem;font-weight:500;letter-spacing:.08em}
+.p-aa .cost-badge{background:rgba(78,130,255,.1);border:1px solid rgba(78,130,255,.2);color:#4e82ff}
+.p-cn .cost-badge{background:rgba(167,100,255,.1);border:1px solid rgba(167,100,255,.2);color:#a764ff}
+
+/* ── AGENTS ── */
+.agent-intro{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:1.5rem}
+.agent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.agent-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:transform .25s,border-color .25s}
+.agent-card:hover{transform:translateY(-2px);border-color:rgba(232,196,106,.25)}
+.agent-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--bright);margin-bottom:.25rem}
+.agent-location{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem}
+.agent-dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.agent-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem}
+.agent-tag{background:rgba(232,196,106,.08);border:1px solid rgba(232,196,106,.15);border-radius:100px;padding:.2rem .65rem;font-size:.68rem;color:var(--gold)}
+.agent-note{font-size:.82rem;color:var(--muted);line-height:1.6}
+.submit-guide{background:var(--surface2);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-top:1.5rem}
+.submit-steps{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem}
+@media(max-width:640px){.submit-steps{grid-template-columns:1fr}}
+.submit-step{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.ss-num{font-family:'Playfair Display',serif;font-size:2rem;color:rgba(232,196,106,.2);line-height:1;margin-bottom:.4rem}
+.ss-title{font-size:.875rem;font-weight:600;color:var(--bright);margin-bottom:.3rem}
+.ss-text{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* ── SCAM WARNING ── */
+.scam-box{background:linear-gradient(135deg,#1a0d10,#1e1015);border:1px solid rgba(247,130,110,.2);border-radius:16px;padding:2rem;margin-bottom:1.5rem}
+.scam-title{color:var(--rose);font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.red-flags{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media(max-width:640px){.red-flags{grid-template-columns:1fr}}
+.red-flag{background:rgba(247,130,110,.06);border:1px solid rgba(247,130,110,.12);border-radius:10px;padding:.9rem 1rem;font-size:.82rem;color:var(--text);display:flex;align-items:flex-start;gap:.6rem;line-height:1.5}
+.red-flag::before{content:'⚠';flex-shrink:0;font-size:.85rem}
+
+/* ── 90-DAY PLAN ── */
+.roadmap{display:flex;flex-direction:column;gap:1.5rem}
+.month-block{border-radius:20px;overflow:hidden;border:1px solid}
+.m1{border-color:rgba(232,196,106,.2)}
+.m2{border-color:rgba(78,205,196,.2)}
+.m3{border-color:rgba(167,139,250,.2)}
+.month-header{padding:1.5rem 2rem;display:flex;align-items:center;gap:1.25rem}
+.m1 .month-header{background:linear-gradient(135deg,rgba(232,196,106,.08),rgba(232,196,106,.03))}
+.m2 .month-header{background:linear-gradient(135deg,rgba(78,205,196,.08),rgba(78,205,196,.03))}
+.m3 .month-header{background:linear-gradient(135deg,rgba(167,139,250,.08),rgba(167,139,250,.03))}
+.month-badge{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;flex-shrink:0}
+.m1 .month-badge{background:rgba(232,196,106,.12);color:var(--gold)}
+.m2 .month-badge{background:rgba(78,205,196,.12);color:var(--teal)}
+.m3 .month-badge{background:rgba(167,139,250,.12);color:var(--lavender)}
+.month-meta{}
+.month-label{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.2rem}
+.m1 .month-label{color:rgba(232,196,106,.5)}
+.m2 .month-label{color:rgba(78,205,196,.5)}
+.m3 .month-label{color:rgba(167,139,250,.5)}
+.month-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--bright)}
+.month-body{padding:1.5rem 2rem;background:var(--surface)}
+.week-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem}
+.week-card{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:1rem}
+.week-label{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.week-tasks{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.week-tasks li{font-size:.8rem;color:var(--text);display:flex;gap:.5rem;line-height:1.45}
+.week-tasks li::before{content:'·';color:var(--gold);flex-shrink:0;font-weight:700}
+
+/* ── TRACKER ── */
+.tracker-intro{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:1.5rem}
+.tracker-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:640px){.tracker-grid{grid-template-columns:1fr}}
+.tracker-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:transform .25s}
+.tracker-card:hover{transform:translateY(-2px)}
+.tc-icon{font-size:1.6rem;margin-bottom:.75rem}
+.tc-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--bright);margin-bottom:.4rem}
+.tc-fields{display:flex;flex-direction:column;gap:.3rem;margin-top:.75rem}
+.tc-field{font-size:.78rem;color:var(--muted);display:flex;gap:.5rem;align-items:center}
+.tc-field::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--teal);flex-shrink:0}
+
+/* ── MILESTONES ── */
+.milestone-list{display:flex;flex-direction:column;gap:0}
+.ms-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;position:relative;padding-bottom:2rem}
+.ms-item:last-child{padding-bottom:0}
+.ms-item::before{content:'';position:absolute;left:119px;top:12px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--border),transparent)}
+.ms-item:last-child::before{display:none}
+.ms-when{text-align:right;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:.15rem;line-height:1.4}
+.ms-dot{position:absolute;left:112px;top:6px;width:16px;height:16px;border-radius:50%;border:2px solid;background:var(--bg);z-index:1}
+.ms-0 .ms-dot{border-color:var(--gold);box-shadow:0 0 8px rgba(232,196,106,.4)}
+.ms-1 .ms-dot{border-color:var(--teal)}
+.ms-2 .ms-dot{border-color:var(--teal)}
+.ms-3 .ms-dot{border-color:var(--lavender)}
+.ms-4 .ms-dot{border-color:var(--lavender)}
+.ms-5 .ms-dot{border-color:var(--rose)}
+.ms-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--bright);margin-bottom:.3rem}
+.ms-desc{font-size:.84rem;color:var(--muted);line-height:1.65}
+
+/* ── FOOTER ── */
+footer{background:var(--surface);border-top:1px solid var(--border);text-align:center;padding:3rem 2rem;font-size:.75rem;color:var(--muted);letter-spacing:.08em}
+footer strong{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--bright);display:block;margin-bottom:.4rem;font-weight:400}
+
+/* ── UTILS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:700px){.grid-2,.grid-3{grid-template-columns:1fr}.s-head{grid-template-columns:1fr}.s-num{font-size:3rem}}
+.highlight{background:linear-gradient(135deg,rgba(232,196,106,.06),rgba(232,196,106,.02));border:1px solid rgba(232,196,106,.15);border-radius:14px;padding:1.5rem 2rem;margin:1.5rem 0}
+.hl-title{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.hl-text{font-size:.875rem;color:var(--text);line-height:1.75}
+ul.plain{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+ul.plain li{font-size:.875rem;color:var(--text);display:flex;align-items:flex-start;gap:.6rem;line-height:1.55}
+ul.plain li::before{content:'→';color:var(--gold);font-size:.8rem;flex-shrink:0;margin-top:.15rem}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <p class="hero-eyebrow">Career Playbook · DC / Baltimore Market</p>
+  <h1 class="hero-title"><em>Kennedy</em><br>Career HQ</h1>
+  <p class="hero-sub">Résumé · Platforms · Agents · 90-Day Roadmap · Tracking System</p>
+  <div class="hero-chips">
+    <span class="chip chip-gold">Film &amp; Television</span>
+    <span class="chip chip-teal">Streaming</span>
+    <span class="chip chip-rose">Commercials</span>
+    <span class="chip chip-lav">Age 11 · Non-Union</span>
+  </div>
+  <div class="scroll-hint"><span>Scroll to begin</span><div class="scroll-bar"></div></div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#resume">Résumé</a>
+    <a href="#platforms">Platforms</a>
+    <a href="#agents">Agents</a>
+    <a href="#scams">Scam Radar</a>
+    <a href="#roadmap">90-Day Plan</a>
+    <a href="#tracker">Tracking System</a>
+    <a href="#milestones">Milestones</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ═══ 01 RESUME ═══════════════════════════════════════ -->
+<section class="section" id="resume">
+  <div class="s-head">
+    <div class="s-num">01</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--gold)">First Document</p>
+      <h2 class="s-title" style="color:var(--bright)">Kennedy's <em style="color:var(--gold)">Actor Résumé</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">Every field below is <strong style="color:var(--teal)">click-to-edit</strong> — fill in Kennedy's real details, then copy the formatted text to a Word doc or Google Doc. Sparse is fine. Every working actor started with a thin résumé. Training counts.</p>
+
+  <div class="resume-wrap">
+    <div class="resume-toolbar">
+      <span class="resume-toolbar-label">📄 Click any field to edit · Tab between fields</span>
+      <div class="resume-toolbar-btns">
+        <button class="btn btn-ghost" onclick="printResume()">🖨 Print / Save PDF</button>
+        <button class="btn btn-teal" onclick="copyResume()">📋 Copy Text</button>
+      </div>
+    </div>
+
+    <div id="resume-doc">
+      <div class="r-name"><span class="editable" contenteditable="true" data-placeholder="Kennedy [Last Name]">Kennedy</span></div>
+      <div class="r-tagline">Actor · Age Range <span class="editable" contenteditable="true" data-placeholder="10–12">10–12</span> · Non-Union</div>
+
+      <div class="r-bar">
+        <div class="r-bar-item"><strong>Height</strong><span class="editable" contenteditable="true" data-placeholder='4&apos;10"'>4'10"</span></div>
+        <div class="r-bar-item"><strong>Weight</strong><span class="editable" contenteditable="true" data-placeholder="90 lbs">90 lbs</span></div>
+        <div class="r-bar-item"><strong>Hair</strong><span class="editable" contenteditable="true" data-placeholder="Brown">Brown</span></div>
+        <div class="r-bar-item"><strong>Eyes</strong><span class="editable" contenteditable="true" data-placeholder="Brown">Brown</span></div>
+        <div class="r-bar-item"><strong>Union</strong><span>Non-Union</span></div>
+        <div class="r-bar-item"><strong>Market</strong><span>DC / Baltimore</span></div>
+      </div>
+
+      <div class="r-section">
+        <div class="r-section-title">Film &amp; Television</div>
+        <div class="r-row">
+          <div>
+            <div class="r-role"><span class="editable" contenteditable="true" data-placeholder="Role Name">Student Film Role</span> <span style="color:var(--muted);font-size:.8rem">— <span class="editable" contenteditable="true" data-placeholder="Lead / Supporting / Day Player">Supporting</span></span></div>
+            <div class="r-where"><span class="editable" contenteditable="true" data-placeholder="Production Title">Short Film Title</span></div>
+          </div>
+          <div class="r-year"><span class="editable" contenteditable="true" data-placeholder="2024">2024</span></div>
+        </div>
+        <div class="r-row" style="opacity:.4;font-style:italic">
+          <div><div class="r-role" style="font-size:.8rem;color:var(--muted)">+ Add more film/TV credits here as you book them</div></div>
+        </div>
+      </div>
+
+      <div class="r-section">
+        <div class="r-section-title">Theater</div>
+        <div class="r-row">
+          <div>
+            <div class="r-role"><span class="editable" contenteditable="true" data-placeholder="Character Name">Character / Role</span></div>
+            <div class="r-where"><span class="editable" contenteditable="true" data-placeholder="Production Title · School or Theater Name">Production Title · School / Theater Name</span></div>
+          </div>
+          <div class="r-year"><span class="editable" contenteditable="true" data-placeholder="2024">2024</span></div>
+        </div>
+        <div class="r-row">
+          <div>
+            <div class="r-role"><span class="editable" contenteditable="true" data-placeholder="Character Name">Character / Role</span></div>
+            <div class="r-where"><span class="editable" contenteditable="true" data-placeholder="Production Title · Theater Name">Production Title · Community Theater</span></div>
+          </div>
+          <div class="r-year"><span class="editable" contenteditable="true" data-placeholder="2023">2023</span></div>
+        </div>
+      </div>
+
+      <div class="r-section">
+        <div class="r-section-title">Training</div>
+        <div class="r-row">
+          <div>
+            <div class="r-role"><span class="editable" contenteditable="true" data-placeholder="Class or Workshop Name">Acting Class / Workshop</span></div>
+            <div class="r-where"><span class="editable" contenteditable="true" data-placeholder="Studio or School Name">Studio / School Name</span> · <span class="editable" contenteditable="true" data-placeholder="Instructor Name">Instructor Name</span></div>
+          </div>
+          <div class="r-year"><span class="editable" contenteditable="true" data-placeholder="Ongoing">Ongoing</span></div>
+        </div>
+        <div class="r-row">
+          <div>
+            <div class="r-role">School Musicals &amp; Plays</div>
+            <div class="r-where"><span class="editable" contenteditable="true" data-placeholder="School Name">School Name</span></div>
+          </div>
+          <div class="r-year"><span class="editable" contenteditable="true" data-placeholder="2022–Present">2022–Present</span></div>
+        </div>
+        <div class="r-row">
+          <div>
+            <div class="r-role">Community Theater</div>
+            <div class="r-where"><span class="editable" contenteditable="true" data-placeholder="Theater Name">Theater Name</span></div>
+          </div>
+          <div class="r-year"><span class="editable" contenteditable="true" data-placeholder="2023–Present">2023–Present</span></div>
+        </div>
+      </div>
+
+      <div class="r-section">
+        <div class="r-section-title">Special Skills</div>
+        <div class="r-skills">
+          <span class="r-skill editable" contenteditable="true" data-placeholder="Sport / Activity">Sport or Activity</span>
+          <span class="r-skill editable" contenteditable="true" data-placeholder="Instrument">Instrument</span>
+          <span class="r-skill editable" contenteditable="true" data-placeholder="Dance style">Dance Style</span>
+          <span class="r-skill editable" contenteditable="true" data-placeholder="Accent / Language">Accent</span>
+          <span class="r-skill editable" contenteditable="true" data-placeholder="Unique skill">Unique Skill</span>
+          <span class="r-skill editable" contenteditable="true" data-placeholder="Add skill +">Add Skill</span>
+        </div>
+        <p style="font-size:.75rem;color:var(--muted);margin-top:.75rem">Include anything distinctive — sports, instruments, accents, horseback riding, gymnastics, martial arts, dialects, etc.</p>
+      </div>
+
+      <div class="r-contact">
+        Parent / Guardian Contact: <span class="editable" contenteditable="true" data-placeholder="Parent Name">Parent Name</span> &nbsp;·&nbsp;
+        <span class="editable" contenteditable="true" data-placeholder="email@address.com">email@address.com</span> &nbsp;·&nbsp;
+        <span class="editable" contenteditable="true" data-placeholder="(xxx) xxx-xxxx">(xxx) xxx-xxxx</span><br/>
+        <span style="font-size:.7rem;opacity:.5;margin-top:.3rem;display:block">Once signed with an agent, replace parent contact with agency name and number</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight" style="margin-top:1.5rem">
+    <div class="hl-title">💡 Résumé Rules</div>
+    <div class="hl-text">Always print on the <strong>back of the headshot</strong> for physical submissions — trimmed to 8×10 to match. Digital submissions attach as a PDF. Never lie or exaggerate credits — the industry is small and casting directors have long memories. A sparse résumé with solid training is completely fine and expected for an 11-year-old just starting out.</div>
+  </div>
+</section>
+
+<!-- ═══ 02 PLATFORMS ═════════════════════════════════════ -->
+<section class="section" id="platforms">
+  <div class="s-head">
+    <div class="s-num">02</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--teal)">Where Casting Lives</p>
+      <h2 class="s-title" style="color:var(--bright)">Casting <em style="color:var(--teal)">Platform Setup</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">These two platforms are where the overwhelming majority of legitimate casting happens. Set both up. Actors Access is the higher priority for film/TV/streaming; Casting Networks is essential for commercials and regional work in DC/Baltimore.</p>
+
+  <div class="platform-grid">
+    <div class="platform-card p-aa">
+      <div class="p-logo">Actors <em>Access</em></div>
+      <div class="p-sub">actorsaccess.com · Film · TV · Streaming</div>
+      <ol class="step-list">
+        <li><span class="step-num">1</span><span>Go to <strong>actorsaccess.com</strong> and create a free account under Kennedy's name (parent manages)</span></li>
+        <li><span class="step-num">2</span><span>Complete the full profile — age range, physical stats, union status (Non-Union), market (Washington DC)</span></li>
+        <li><span class="step-num">3</span><span>Upload your primary headshot as the lead image. Add 2–3 alternate looks from the session</span></li>
+        <li><span class="step-num">4</span><span>Upload the résumé as a PDF attachment</span></li>
+        <li><span class="step-num">5</span><span>Add a brief bio — 2–3 sentences, age-appropriate, warm and honest</span></li>
+        <li><span class="step-num">6</span><span>Set your market to DC/Baltimore. You can also add NYC as a secondary if willing to travel</span></li>
+        <li><span class="step-num">7</span><span>Upgrade to <strong>Showfax</strong> ($9.99/mo or $68/yr) when you're ready to submit to breakdowns — not required to start</span></li>
+      </ol>
+      <span class="cost-badge">Free to create · Showfax $68/yr for submissions</span>
+    </div>
+
+    <div class="platform-card p-cn">
+      <div class="p-logo">Casting <em>Networks</em></div>
+      <div class="p-sub">app.castingnetworks.com · Commercials · Regional</div>
+      <ol class="step-list">
+        <li><span class="step-num">1</span><span>Go to <strong>app.castingnetworks.com</strong> and create a profile — this platform is especially active in regional markets like DC/Baltimore</span></li>
+        <li><span class="step-num">2</span><span>Complete physical profile fully — casting directors filter by exact specs, so accuracy matters</span></li>
+        <li><span class="step-num">3</span><span>Upload headshots — label each by category (commercial, theatrical)</span></li>
+        <li><span class="step-num">4</span><span>Attach résumé PDF and fill in all training/experience fields manually in the platform</span></li>
+        <li><span class="step-num">5</span><span>Set location to Washington DC area and add Baltimore as secondary</span></li>
+        <li><span class="step-num">6</span><span>Check the platform's active casting calls — DC/Baltimore commercial casting is frequently posted here</span></li>
+      </ol>
+      <span class="cost-badge">~$20/mo subscription · Often required by regional agents</span>
+    </div>
+  </div>
+
+  <div class="highlight" style="margin-top:1.5rem">
+    <div class="hl-title">📸 Profile Photo Strategy</div>
+    <div class="hl-text">Use your strongest <strong>commercial</strong> look as the lead/primary image on both platforms — it's the widest net. Use the theatrical look as the second photo. On platforms that allow labels, mark them clearly. Casting directors scroll fast; your primary photo has about 2 seconds to earn a click.</div>
+  </div>
+
+  <div class="grid-2" style="margin-top:1rem">
+    <div class="card">
+      <div class="card-title">🎯 Also Worth Setting Up</div>
+      <div class="card-text">
+        <ul class="plain" style="margin-top:.5rem">
+          <li><strong style="color:var(--bright)">Backstage.com</strong> — strong for DC/Baltimore non-union submissions and student film casting</li>
+          <li><strong style="color:var(--bright)">Casting Frontier</strong> — used by some regional commercial and TV casting</li>
+          <li><strong style="color:var(--bright)">IMDb</strong> — create a basic page now; it becomes more valuable as credits build</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">⚡ DC/Baltimore Platform Priority Order</div>
+      <div class="card-text">
+        <ul class="plain" style="margin-top:.5rem">
+          <li><strong style="color:var(--teal)">Actors Access</strong> — Set up first, highest volume of film/TV breakdowns</li>
+          <li><strong style="color:var(--lavender)">Casting Networks</strong> — Set up second, strong for local commercial/print</li>
+          <li><strong style="color:var(--muted)">Backstage</strong> — Set up third, good for student films and non-union projects</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 03 AGENTS ════════════════════════════════════════ -->
+<section class="section" id="agents">
+  <div class="s-head">
+    <div class="s-num">03</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--rose)">Representation</p>
+      <h2 class="s-title" style="color:var(--bright)">Finding <em style="color:var(--rose)">Agents &amp; Managers</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">DC/Baltimore is a real, active market — not LA, but there is consistent commercial, print, TV, and political/government-adjacent production work. These are the reputable agencies to research and submit to.</p>
+
+  <div class="agent-intro">
+    <p style="font-size:.875rem;color:var(--text);line-height:1.75;margin-bottom:1rem">The DC/Baltimore market has a handful of legitimate, established talent agencies. <strong style="color:var(--bright)">An agent is not required to start submitting and auditioning</strong> — you can self-submit through the platforms above. But an agent expands access significantly, especially for union work and larger productions.</p>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;font-weight:500">Agent vs. Manager</p>
+        <ul class="plain">
+          <li><strong style="color:var(--bright)">Agent</strong> — books jobs, takes 10% commission, regulated</li>
+          <li><strong style="color:var(--bright)">Manager</strong> — develops career strategy, takes 15–20%, less regulated</li>
+          <li>Start with an agent. Add a manager later if warranted.</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;font-weight:500">When You're Ready to Submit</p>
+        <ul class="plain">
+          <li>Headshots done ✓</li>
+          <li>Résumé built ✓</li>
+          <li>At least one casting platform set up ✓</li>
+          <li>A brief, confident cover letter</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="agent-grid">
+    <div class="agent-card">
+      <div class="agent-name">Reinhard Agency</div>
+      <div class="agent-location"><div class="agent-dot"></div>Baltimore, MD</div>
+      <div class="agent-tags"><span class="agent-tag">Children</span><span class="agent-tag">Commercial</span><span class="agent-tag">Film/TV</span></div>
+      <div class="agent-note">One of the most established agencies in the Baltimore market. Represents children and adults. Strong commercial and print placement. Research their current submission policy at reinhardagency.com.</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">Taylor Royall Agency</div>
+      <div class="agent-location"><div class="agent-dot"></div>Baltimore, MD</div>
+      <div class="agent-tags"><span class="agent-tag">Children</span><span class="agent-tag">Commercial</span><span class="agent-tag">Print</span></div>
+      <div class="agent-note">Boutique agency with regional commercial focus. Known for working with young talent in the Baltimore area. Verify submission guidelines directly on their website before sending.</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">Firebrand Talent</div>
+      <div class="agent-location"><div class="agent-dot"></div>Washington, DC</div>
+      <div class="agent-tags"><span class="agent-tag">Film/TV</span><span class="agent-tag">Commercial</span><span class="agent-tag">DC Market</span></div>
+      <div class="agent-note">DC-based agency with connections to film and TV productions that come through the area. Strong for talent targeting the DC commercial market and regional broadcast work.</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">Affiliated Models &amp; Talent</div>
+      <div class="agent-location"><div class="agent-dot"></div>DC / Baltimore</div>
+      <div class="agent-tags"><span class="agent-tag">Children</span><span class="agent-tag">Print</span><span class="agent-tag">Commercial</span></div>
+      <div class="agent-note">Active in both DC and Baltimore markets. Print and commercial focus. Represents young talent. A good target for Kennedy's commercial lane given her headshot package.</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">Central Casting (Baltimore/DC)</div>
+      <div class="agent-location"><div class="agent-dot"></div>Regional</div>
+      <div class="agent-tags"><span class="agent-tag">Background</span><span class="agent-tag">Film/TV</span><span class="agent-tag">Entry Point</span></div>
+      <div class="agent-note">Not an agency — a background casting company. But registering here gets Kennedy on set for film/TV productions shooting in the DC/Baltimore area, which builds industry experience and connections.</div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-name">Proximity to NYC</div>
+      <div class="agent-location"><div class="agent-dot"></div>New York, NY (3–4 hrs)</div>
+      <div class="agent-tags"><span class="agent-tag">Future Target</span><span class="agent-tag">Tier 1 Market</span></div>
+      <div class="agent-note">DC's proximity to NYC is a genuine asset. Once Kennedy has credits and momentum in the local market, NYC agents become reachable. This is a 12–24 month goal, not an immediate one.</div>
+    </div>
+  </div>
+
+  <div class="submit-guide">
+    <p style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:500;margin-bottom:.4rem">How to Submit to Agents</p>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bright);margin-bottom:.25rem">The Submission Package</h3>
+    <p style="font-size:.875rem;color:var(--muted);line-height:1.7">Keep it simple, professional, and short. Agents receive dozens of submissions per week. Yours should be easy to review in 60 seconds.</p>
+    <div class="submit-steps">
+      <div class="submit-step">
+        <div class="ss-num">01</div>
+        <div class="ss-title">Cover Letter (Email Body)</div>
+        <div class="ss-text">3–4 sentences max. Name, age, market, training summary, and one line about what you're looking for. Warm but professional. No superlatives ("most talented," "born to act"). Let the headshots speak.</div>
+      </div>
+      <div class="submit-step">
+        <div class="ss-num">02</div>
+        <div class="ss-title">Headshot Attachment</div>
+        <div class="ss-text">Attach your primary headshot as a JPEG (under 5MB). Name the file: Kennedy_LastName_Commercial.jpg. Do not embed images in the email body — they often break.</div>
+      </div>
+      <div class="submit-step">
+        <div class="ss-num">03</div>
+        <div class="ss-title">Résumé PDF</div>
+        <div class="ss-text">Attach as Kennedy_LastName_Resume.pdf. Keep it to one page. If you've already built the Actors Access profile, you can note "full profile at actorsaccess.com/Kennedy" at the bottom.</div>
+      </div>
+      <div class="submit-step">
+        <div class="ss-num">04</div>
+        <div class="ss-title">Follow-Up Strategy</div>
+        <div class="ss-text">If no response in 3–4 weeks, one polite follow-up is appropriate. After that, move on and resubmit in 6 months with updated photos if you have them. No more than that — persistence and pestering look the same.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 SCAM RADAR ════════════════════════════════════ -->
+<section class="section" id="scams">
+  <div class="s-head">
+    <div class="s-num">04</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--rose)">Protect Kennedy</p>
+      <h2 class="s-title" style="color:var(--bright)">Scam <em style="color:var(--rose)">Radar</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">The children's entertainment industry attracts predatory operators. Parents are the first and most important line of protection. Know these warning signs cold — and trust your gut when something feels off.</p>
+
+  <div class="scam-box">
+    <div class="scam-title">⛔ Immediate Red Flags — Walk Away</div>
+    <div class="red-flags">
+      <div class="red-flag">Upfront fees to be "represented" or "listed" — legitimate agents only earn commission when you book work</div>
+      <div class="red-flag">"Your child is perfect for modeling / commercials" cold approached at a mall or public place</div>
+      <div class="red-flag">Mandatory paid photography packages as a condition of representation</div>
+      <div class="red-flag">Guaranteed work, guaranteed callbacks, or "we have casting directors waiting"</div>
+      <div class="red-flag">High-pressure tactics — "we only have one spot left" or "sign today"</div>
+      <div class="red-flag">Requests to meet without a parent present, or for private communication with the child</div>
+      <div class="red-flag">Agents charging 15–20%+ commission — legitimate agents take 10%, period</div>
+      <div class="red-flag">No verifiable physical address, no agency website, or Google produces no credible trace</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">✅ How Legitimate Agencies Work</div>
+      <div class="card-text">
+        <ul class="plain" style="margin-top:.5rem">
+          <li>They review your submission and either pass or request a meeting</li>
+          <li>Meetings happen in a professional office setting with a parent present</li>
+          <li>They sign you (or don't) — no fees involved</li>
+          <li>They submit you to casting calls in their database</li>
+          <li>You audition. If you book, they take 10% of what you earn</li>
+          <li>You <strong style="color:var(--bright)">never pay them anything upfront</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🔍 How to Verify an Agency</div>
+      <div class="card-text">
+        <ul class="plain" style="margin-top:.5rem">
+          <li>Search the agency name + "reviews" + "scam" before submitting</li>
+          <li>Check if they appear on SAG-AFTRA's franchised agency list</li>
+          <li>Search the Better Business Bureau (bbb.org)</li>
+          <li>Ask for references from current clients (legitimate agencies will provide)</li>
+          <li>Search the talent coordinator's name individually</li>
+          <li>Trust other parents in local theater / acting communities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 90-DAY ROADMAP ═════════════════════════════════ -->
+<section class="section" id="roadmap">
+  <div class="s-head">
+    <div class="s-num">05</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--teal)">The Plan</p>
+      <h2 class="s-title" style="color:var(--bright)">Your <em style="color:var(--teal)">90-Day Roadmap</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">Month 1 is about building the foundation. Month 2 is about activating it. Month 3 is about consistency and momentum. Do these in order — rushing to Month 3 without Month 1 complete is how careers stall before they start.</p>
+
+  <div class="roadmap">
+
+    <div class="month-block m1">
+      <div class="month-header">
+        <div class="month-badge">1</div>
+        <div class="month-meta">
+          <div class="month-label">Weeks 1–4</div>
+          <div class="month-title">Build the Foundation</div>
+        </div>
+      </div>
+      <div class="month-body">
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(232,196,106,.5)">Week 1</div>
+            <ul class="week-tasks">
+              <li>Select final headshots from session</li>
+              <li>Get second opinion on selects</li>
+              <li>Request final edited files from photographer</li>
+              <li>Build résumé using the template above</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(232,196,106,.5)">Week 2</div>
+            <ul class="week-tasks">
+              <li>Create Actors Access profile</li>
+              <li>Upload headshots + résumé to AA</li>
+              <li>Create Casting Networks profile</li>
+              <li>Set up Backstage.com profile</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(232,196,106,.5)">Week 3</div>
+            <ul class="week-tasks">
+              <li>Research DC/Baltimore agencies</li>
+              <li>Verify each agency (BBB, reviews, SAG list)</li>
+              <li>Draft agent submission cover letter</li>
+              <li>Prepare submission package files</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(232,196,106,.5)">Week 4</div>
+            <ul class="week-tasks">
+              <li>Submit to 3–5 reputable local agencies</li>
+              <li>Register with Central Casting (background)</li>
+              <li>Enroll Kennedy in ongoing acting class if not already</li>
+              <li>Set up audition tracking spreadsheet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-block m2">
+      <div class="month-header">
+        <div class="month-badge">2</div>
+        <div class="month-meta">
+          <div class="month-label">Weeks 5–8</div>
+          <div class="month-title">Activate &amp; Audition</div>
+        </div>
+      </div>
+      <div class="month-body">
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(78,205,196,.4)">Week 5</div>
+            <ul class="week-tasks">
+              <li>Begin checking casting platforms daily (10 min/day)</li>
+              <li>Self-submit to every appropriate breakdown</li>
+              <li>Set up a dedicated email address for submissions</li>
+              <li>Follow up on any agent submissions from Month 1</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(78,205,196,.4)">Week 6</div>
+            <ul class="week-tasks">
+              <li>Learn self-tape basics (see self-tape guide below)</li>
+              <li>Set up a simple self-tape space at home</li>
+              <li>Record and review a practice self-tape</li>
+              <li>Submit to any student film castings in region</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(78,205,196,.4)">Weeks 7–8</div>
+            <ul class="week-tasks">
+              <li>First auditions — any format</li>
+              <li>Log every audition in tracking sheet</li>
+              <li>Debrief after each audition constructively</li>
+              <li>Attend local theater community events / workshops</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(78,205,196,.4)">Ongoing M2</div>
+            <ul class="week-tasks">
+              <li>Keep training consistent — class every week</li>
+              <li>Connect with other parents in local acting communities</li>
+              <li>Research DC Film Office productions in the area</li>
+              <li>Check university film departments for student casting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-block m3">
+      <div class="month-header">
+        <div class="month-badge">3</div>
+        <div class="month-meta">
+          <div class="month-label">Weeks 9–12</div>
+          <div class="month-title">Build Consistency &amp; Momentum</div>
+        </div>
+      </div>
+      <div class="month-body">
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(167,139,250,.4)">Focus: Review</div>
+            <ul class="week-tasks">
+              <li>Review audition log — what patterns do you see?</li>
+              <li>What types of roles is she getting called back for?</li>
+              <li>Is there a look or lane performing better than others?</li>
+              <li>Adjust submission strategy based on data</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(167,139,250,.4)">Focus: Training</div>
+            <ul class="week-tasks">
+              <li>Consider adding an on-camera class if not already</li>
+              <li>Cold reading practice — library or drama teacher</li>
+              <li>Book a coaching session before any major audition</li>
+              <li>Consider improv class for natural spontaneity</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(167,139,250,.4)">Focus: Network</div>
+            <ul class="week-tasks">
+              <li>Introduce yourself to local CDs at any open calls</li>
+              <li>Connect with community theater directors</li>
+              <li>Georgetown, AU, Howard, MICA: contact film departments</li>
+              <li>Any bookings? Ask for a reel clip or letter of rec</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <div class="week-label" style="color:rgba(167,139,250,.4)">Focus: Evaluate</div>
+            <ul class="week-tasks">
+              <li>90-day debrief — what worked?</li>
+              <li>Plan headshot update if appearance has changed</li>
+              <li>Set goals for next 90 days</li>
+              <li>Assess Kennedy's enjoyment level — wellbeing first, always</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ 06 TRACKING SYSTEM ════════════════════════════════ -->
+<section class="section" id="tracker">
+  <div class="s-head">
+    <div class="s-num">06</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--lavender)">Stay Organized</p>
+      <h2 class="s-title" style="color:var(--bright)">Career <em style="color:var(--lavender)">Tracking System</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">Treat Kennedy's career like a project. Keep a single Google Sheet (or Notion page) with these five tabs. Review it monthly to spot patterns — what she's submitting for, what's converting, what's not.</p>
+
+  <div class="tracker-intro">
+    <p style="font-size:.875rem;color:var(--text);line-height:1.75">A simple Google Sheet is all you need. Create one workbook with these tabs. Updating it takes 5 minutes after each audition, and over time it becomes an incredibly valuable data set for making smart decisions about where to focus.</p>
+  </div>
+
+  <div class="tracker-grid">
+    <div class="tracker-card">
+      <div class="tc-icon">🎭</div>
+      <div class="tc-title">Audition Log</div>
+      <div style="font-size:.82rem;color:var(--muted);line-height:1.6">Track every submission and audition. Over time this reveals patterns in what's converting.</div>
+      <div class="tc-fields">
+        <div class="tc-field">Date submitted</div>
+        <div class="tc-field">Project name + type (film/TV/commercial)</div>
+        <div class="tc-field">Role name + description</div>
+        <div class="tc-field">Casting director / production company</div>
+        <div class="tc-field">Platform submitted through</div>
+        <div class="tc-field">Status: submitted / audition / callback / booked / passed</div>
+        <div class="tc-field">Notes (what went well, what to improve)</div>
+      </div>
+    </div>
+
+    <div class="tracker-card">
+      <div class="tc-icon">🤝</div>
+      <div class="tc-title">Contacts &amp; Relationships</div>
+      <div style="font-size:.82rem;color:var(--muted);line-height:1.6">Industry relationships compound over time. Track everyone who matters.</div>
+      <div class="tc-fields">
+        <div class="tc-field">Name + role (agent, CD, director, coach)</div>
+        <div class="tc-field">Company / production house</div>
+        <div class="tc-field">How you connected</div>
+        <div class="tc-field">Date of last contact</div>
+        <div class="tc-field">Notes on relationship / history</div>
+        <div class="tc-field">Follow-up needed? (Y/N + date)</div>
+      </div>
+    </div>
+
+    <div class="tracker-card">
+      <div class="tc-icon">📚</div>
+      <div class="tc-title">Training Log</div>
+      <div style="font-size:.82rem;color:var(--muted);line-height:1.6">A record of Kennedy's development — useful for résumé updates and showing agents growth.</div>
+      <div class="tc-fields">
+        <div class="tc-field">Class / workshop name</div>
+        <div class="tc-field">Instructor + studio</div>
+        <div class="tc-field">Dates (start / end or ongoing)</div>
+        <div class="tc-field">Skills covered</div>
+        <div class="tc-field">Key takeaways / breakthroughs</div>
+        <div class="tc-field">Cost (for budget tracking)</div>
+      </div>
+    </div>
+
+    <div class="tracker-card">
+      <div class="tc-icon">💰</div>
+      <div class="tc-title">Budget &amp; Expenses</div>
+      <div style="font-size:.82rem;color:var(--muted);line-height:1.6">Acting careers cost money. Track it so you can make smart decisions about where to invest.</div>
+      <div class="tc-fields">
+        <div class="tc-field">Headshots (photography + editing)</div>
+        <div class="tc-field">Platform subscriptions (AA, CN, Backstage)</div>
+        <div class="tc-field">Classes + coaching sessions</div>
+        <div class="tc-field">Travel to auditions</div>
+        <div class="tc-field">Wardrobe for auditions</div>
+        <div class="tc-field">Income booked (track separately for taxes)</div>
+      </div>
+    </div>
+
+    <div class="tracker-card">
+      <div class="tc-icon">🎬</div>
+      <div class="tc-title">Credits &amp; Clips</div>
+      <div style="font-size:.82rem;color:var(--muted);line-height:1.6">Every booking, every performance — track them here so nothing gets lost when it's résumé time.</div>
+      <div class="tc-fields">
+        <div class="tc-field">Production name + type</div>
+        <div class="tc-field">Role + billing (lead / supporting / featured)</div>
+        <div class="tc-field">Director / production company</div>
+        <div class="tc-field">Air date or release (when known)</div>
+        <div class="tc-field">Reel clip obtained? (Y/N + file location)</div>
+        <div class="tc-field">IMDb credit added? (Y/N)</div>
+      </div>
+    </div>
+
+    <div class="tracker-card">
+      <div class="tc-icon">📅</div>
+      <div class="tc-title">Self-Tape Library</div>
+      <div style="font-size:.82rem;color:var(--muted);line-height:1.6">Save every self-tape in a labeled Google Drive folder. They become a progress record and informal demo reel.</div>
+      <div class="tc-fields">
+        <div class="tc-field">Date recorded</div>
+        <div class="tc-field">Project + role it was submitted for</div>
+        <div class="tc-field">Sides / scene description</div>
+        <div class="tc-field">Google Drive link</div>
+        <div class="tc-field">What to improve next time</div>
+        <div class="tc-field">Did it lead to a callback?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight" style="margin-top:1.5rem">
+    <div class="hl-title">⚖️ Balancing Career + Childhood</div>
+    <div class="hl-text">Add a <strong>Wellbeing Check</strong> column to your audition log. After each experience, note Kennedy's energy level and enjoyment (1–5). If the numbers trend down for several weeks, slow down — not every opportunity needs to be pursued. Sustainable careers are built on enjoyment and skill, not exhaustion. School, friends, rest, and being an 11-year-old come first.</div>
+  </div>
+</section>
+
+<!-- ═══ 07 MILESTONES ════════════════════════════════════ -->
+<section class="section" id="milestones">
+  <div class="s-head">
+    <div class="s-num">07</div>
+    <div>
+      <p class="s-eyebrow" style="color:var(--gold)">Looking Ahead</p>
+      <h2 class="s-title" style="color:var(--bright)">Realistic <em style="color:var(--gold)">Milestones</em></h2>
+    </div>
+  </div>
+  <div class="s-divider"></div>
+  <p class="s-lead">These are realistic, achievable milestones — not guarantees, but genuine markers of a healthy career trajectory. Use them as orientation points, not a scoreboard. Every actor's path is different.</p>
+
+  <div class="milestone-list">
+    <div class="ms-item ms-0">
+      <div class="ms-when">Now<br/>Month 1</div>
+      <div class="ms-dot"></div>
+      <div>
+        <div class="ms-title">Foundation Complete</div>
+        <div class="ms-desc">Headshots selected and delivered. Résumé built. Actors Access and Casting Networks profiles live. First agent submissions sent. This is the hardest part — the rest builds on it.</div>
+      </div>
+    </div>
+    <div class="ms-item ms-1">
+      <div class="ms-when">Months<br/>1–3</div>
+      <div class="ms-dot"></div>
+      <div>
+        <div class="ms-title">First Auditions</div>
+        <div class="ms-desc">First auditions — self-tape or in-person — through platform submissions or background work. The goal here is not booking, it's experiencing the process and building comfort with auditioning. Every audition is a rep.</div>
+      </div>
+    </div>
+    <div class="ms-item ms-2">
+      <div class="ms-when">Months<br/>3–6</div>
+      <div class="ms-dot"></div>
+      <div>
+        <div class="ms-title">Agent Interest or Signing</div>
+        <div class="ms-desc">A response from one or more of the submitted agencies. This may be a meeting, a signing, or continued self-representation — all valid paths. An agent in this timeframe is great; not having one yet is still normal and manageable.</div>
+      </div>
+    </div>
+    <div class="ms-item ms-3">
+      <div class="ms-when">Months<br/>4–9</div>
+      <div class="ms-dot"></div>
+      <div>
+        <div class="ms-title">First Booking</div>
+        <div class="ms-desc">First paid or credited booking — student film, commercial, co-star, background with upgrade. Any booking validates the process and gives Kennedy a real set experience. This is the credit that starts the résumé.</div>
+      </div>
+    </div>
+    <div class="ms-item ms-4">
+      <div class="ms-when">Months<br/>9–18</div>
+      <div class="ms-dot"></div>
+      <div>
+        <div class="ms-title">Demo Reel &amp; Update</div>
+        <div class="ms-desc">With a booking or two, Kennedy can assemble a brief demo reel — 60–90 seconds of her best on-camera work. Update headshots if appearance has changed significantly. The profile deepens and submissions get stronger.</div>
+      </div>
+    </div>
+    <div class="ms-item ms-5">
+      <div class="ms-when">Year<br/>2+</div>
+      <div class="ms-dot"></div>
+      <div>
+        <div class="ms-title">Consistent Pipeline &amp; Expanded Market</div>
+        <div class="ms-desc">Regular auditions, a developing relationship with local CDs, and potential expansion toward NYC submissions. At this stage, if the momentum is real, evaluating a manager or dedicated NYC agent becomes a meaningful conversation.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight" style="margin-top:3rem">
+    <div class="hl-title">📐 The Only Metric That Matters Right Now</div>
+    <div class="hl-text" style="font-size:.95rem">Is Kennedy <strong style="color:var(--bright)">improving, enjoying it, and staying healthy?</strong> If yes — you're succeeding, regardless of what's booking. The bookings will come as a natural consequence of consistent training, professional materials, and intelligent submissions. Building a sustainable career takes 2–3 years of consistent effort. Anyone promising faster is selling something.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>Kennedy · Career Playbook · DC / Baltimore</strong>
+  A living document — update as Kennedy's career grows &nbsp;·&nbsp; Built for her family and team
+  <span style="display:block;margin-top:.5rem;font-size:.65rem;opacity:.4;letter-spacing:.15em">FILM · TELEVISION · STREAMING · COMMERCIALS · DC / BALTIMORE MARKET</span>
+</footer>
+
+<script>
+// Nav active state
+const sections=document.querySelectorAll('section[id]');
+const links=document.querySelectorAll('.nav-inner a');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>{
+        l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);
+      });
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-55,behavior:'smooth'});
+  });
+});
+
+// Print resume
+function printResume(){
+  const content=document.getElementById('resume-doc').innerHTML;
+  const w=window.open('','_blank');
+  w.document.write(`<!DOCTYPE html><html><head><title>Kennedy - Actor Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    body{font-family:'Outfit',sans-serif;color:#111;background:white;padding:2rem;max-width:700px;margin:0 auto}
+    .r-name{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;text-align:center}
+    .r-tagline{text-align:center;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#666;margin-bottom:1rem}
+    .r-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.5rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #ddd}
+    .r-bar-item{font-size:.8rem;display:flex;gap:.3rem}
+    .r-bar-item strong{color:#888;font-weight:400;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}
+    .r-section{margin-bottom:1.5rem}
+    .r-section-title{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:#c8a030;font-weight:600;margin-bottom:.5rem;padding-bottom:.4rem;border-bottom:1px solid #f0e0c0}
+    .r-row{display:grid;grid-template-columns:1fr auto;gap:1rem;margin-bottom:.4rem}
+    .r-role{font-size:.88rem;font-weight:500}
+    .r-where{font-size:.8rem;color:#555}
+    .r-year{font-size:.78rem;color:#888;text-align:right}
+    .r-skills{display:flex;flex-wrap:wrap;gap:.4rem}
+    .r-skill{background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:.2rem .6rem;font-size:.78rem}
+    .r-contact{text-align:center;font-size:.78rem;color:#888;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee}
+    .editable{display:inline}
+    @media print{body{padding:0}}
+  </style></head><body>${content}<script>window.onload=()=>window.print()<\/script></body></html>`);
+  w.document.close();
+}
+
+// Copy resume text
+function copyResume(){
+  const doc=document.getElementById('resume-doc');
+  const text=doc.innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn=event.target;
+    btn.textContent='✓ Copied!';
+    btn.style.background='#4ecdc4';
+    setTimeout(()=>{btn.textContent='📋 Copy Text';btn.style.background=''},2000);
+  });
+}
+</script>
+</body>
+</html>
